@@ -111,19 +111,53 @@
 </header>
 <!-- /navigation -->
 
-<section class="section">
+<section class="section-sm">
   <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-10">
-        <div id="search-results"></div>
-        <script id="search-result-template" type="text/x-js-template">
-          <div class="py-4 border-bottom" id="summary-${key}">
-            <h4><a href="${link}">${title}</a></h4>
-            <p>${snippet}</p>
-            ${ isset tags }<p>Tags: ${tags}</p>${ end }
-            ${ isset categories }<p>Categories: ${categories}</p>${ end }
-          </div>
-        </script>
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/statistics"
+          class="text-primary">Statistics</a>
+        
+        <h2>Hypothesis Testing (NULL Hypothesis) 統計假設檢定</h2>
+        <div class="mb-3 post-meta">
+          <span>By Yao-Chung</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>24 October 2020</span>
+          
+        </div>
+        
+        <div class="content mb-5">
+          <h3 id="statquest-hypothesis-testing-假設檢定">StatQuest (Hypothesis Testing) 假設檢定</h3>
+<p>StatQuest 系列都是版主看完影片整理的筆記，我並不擁有影片。</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/0oc49DyA3hU" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<hr>
+<p>筆記重點：</p>
+<p><strong>Null Hypothesis</strong>: There is no difference between things (<strong>虛無假設</strong> 代表兩者沒有差異)</p>
+<p>We use hypothesis testing to determine we fail to reject the null hypothesis or to reject null hypothesis 我們做統計檢定來決定是否<strong>對虛無假設拒絕失敗</strong>或是<strong>拒絕虛無假設</strong>。</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/5koKb5B_YWo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>We reject the <strong>Null Hypothesis</strong> in favor of this <strong>Alternative Hypothesis</strong>.  這種寫法比較好，原因是因為我們不知道我們選擇的 Alternatice Hypothesis 是否為最佳的，所以用 in favor of 而不是說 accept。這部最後有整理說一個統計檢定需包含三個部分：(1) It needs data (2) Null Hypothesis (3) Alternative Hypothesis。當只有兩個族群的資料的時候，Alternative Hypothesis 非常的簡單就是 Null Hypothesis 的相反 (Mean1 =/= Mean2)。</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/vemZtEM63GY" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>統計 P 值（ p-value）是一個介於 0 至 1 之間的數字，量化我們對於 group A 和 group B (比如藥物 A 和藥物 B 對於疾病的療效） 有不同這件事情有多少的信心，當 p-value 越接近 0 的時候，我們對於差異的信心越大。常用的閾值是 0.05，意思就是當量夠大的時候，我們判斷錯誤的機率是 5% 。</p>
+<p>Getting a small value of p-value when it is no difference is called <strong>False Positive</strong>. 制訂的閾值大小代表說你願意接受多少機率會失敗。以下為一個統計敘述句範例可以學習：If the p-value is 0.24, we are not confident that Drug A is different from Drug B. 最後要提醒的是，p-value 只能告訴我們這兩者有沒有顯著的差異，但他無法告速我們這樣的差異有多大。</p>
+
+        </div>
+
+        
+        
       </div>
     </div>
   </div>

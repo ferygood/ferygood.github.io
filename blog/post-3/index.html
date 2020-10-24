@@ -111,19 +111,49 @@
 </header>
 <!-- /navigation -->
 
-<section class="section">
+<section class="section-sm">
   <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-10">
-        <div id="search-results"></div>
-        <script id="search-result-template" type="text/x-js-template">
-          <div class="py-4 border-bottom" id="summary-${key}">
-            <h4><a href="${link}">${title}</a></h4>
-            <p>${snippet}</p>
-            ${ isset tags }<p>Tags: ${tags}</p>${ end }
-            ${ isset categories }<p>Categories: ${categories}</p>${ end }
-          </div>
-        </script>
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/statistics"
+          class="text-primary">Statistics</a>
+        
+        <h2>基礎統計 Fundamental Statistics</h2>
+        <div class="mb-3 post-meta">
+          <span>By Yao-Chung</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>24 October 2020</span>
+          
+        </div>
+        
+        <div class="content mb-5">
+          <h3 id="statquest-fundamental-statistics-基礎統計概念">StatQuest (Fundamental Statistics) 基礎統計概念</h3>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/yQhTtdq_y9M" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<hr>
+<p>前言：</p>
+<p>統計在生物資訊學上非常的重要，而在 youtube 有很多學習資源，今天想要整理 Josh Starmer 製作一系列的影片中的基礎篇重點（Notes of Fundamental Statistics)</p>
+<p>裡面提到統計模型（Statistical Model）的說明我覺得很棒，統計模型可以想成一條方程式，幫助你預測或是說計算你還沒有抽樣的樣本，當然這個方程式必須要透過之前搜集過很多資料所寫成的，因此他才能夠幫助我們去預測你還沒有抽樣的樣本。而我們會需要透過假設檢定來驗證我們模型（方程式）是否足夠可靠。</p>
+<p><img src="/Users/yaochung41/Desktop/exampleSite/static/images/post/statistical_model.jpg" alt="statistical_model"></p>
+<p>如上圖是一個老鼠體型大小和體重輕重的模型（方程式），前人透過數次的採樣得到 <code>mouse size = 0.1 + 0.8 x mouse weight</code>，因此我們如果只知道老鼠的體重或是體型大小或是有人想要預測說當一個老鼠體重到 4 units 的時候他的體型有機會是 3.3 units ( 0.1 + 0.8 * 4)，就可以透過這個算式去獲得另外一個變量，做一個保守的採樣估計，這也是統計模型可以幫助到我們的地方。</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/qBigTkBLU6g" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>這個直方圖的影片我覺得很棒的地方是他有用到一句英文在描述統計：(前提是你看出你的資料分布後)</p>
+<p>We use <strong>an exponential distribution</strong> to approximate this data and future measurements.</p>
+<p>統計分佈的模型可以依照你的資料分布做更換。</p>
+
+        </div>
+
+        
+        
       </div>
     </div>
   </div>
