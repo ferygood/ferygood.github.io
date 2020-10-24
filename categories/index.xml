@@ -1,16 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories | 白金之星</title>
+    <title>Categories on Yao-Chung | Data Scientist</title>
     <link>https://ferygood.github.io/categories/</link>
-      <atom:link href="https://ferygood.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    <description>Categories</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>yaochungchen {2020} &amp;copy All rights served</copyright><lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://ferygood.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
-      <title>Categories</title>
-      <link>https://ferygood.github.io/categories/</link>
-    </image>
+    <description>Recent content in Categories on Yao-Chung | Data Scientist</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Tue, 29 Oct 2019 10:07:47 +0600</lastBuildDate><atom:link href="https://ferygood.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android And Gaming</title>
+      <link>https://ferygood.github.io/categories/android-and-gaming/</link>
+      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
+      
+      <guid>https://ferygood.github.io/categories/android-and-gaming/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
