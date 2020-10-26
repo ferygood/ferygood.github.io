@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Game on Yao-Chung | Data Scientist</title>
+    <link>https://ferygood.github.io/tags/game/</link>
+    <description>Recent content in Game on Yao-Chung | Data Scientist</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Sat, 24 Oct 2020 10:07:47 +0600</lastBuildDate><atom:link href="https://ferygood.github.io/tags/game/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hypothesis Testing (NULL Hypothesis) 統計假設檢定</title>
+      <link>https://ferygood.github.io/blog/post-2/</link>
+      <pubDate>Sat, 24 Oct 2020 10:07:47 +0600</pubDate>
+      
+      <guid>https://ferygood.github.io/blog/post-2/</guid>
+      <description>StatQuest (Hypothesis Testing) 假設檢定 StatQuest 系列都是版主看完影片整理的筆記，我並不擁有影片。
+   筆記重點：</description>
+    </item>
+    
+    <item>
+      <title>基礎統計 Fundamental Statistics</title>
+      <link>https://ferygood.github.io/blog/post-3/</link>
+      <pubDate>Sat, 24 Oct 2020 10:07:47 +0600</pubDate>
+      
+      <guid>https://ferygood.github.io/blog/post-3/</guid>
+      <description>StatQuest (Fundamental Statistics) 基礎統計概念    前言：
+統計在生物資訊學上非常的重要，而在 youtube 有很多學習資源，今天想要整理 Josh Starmer 製作一系列的影片中的基礎篇重點（Notes of Fundamental Statistics)</description>
+    </item>
+    
+    <item>
+      <title>How To Use Checklists To Improve Your UX</title>
+      <link>https://ferygood.github.io/blog/post-1/</link>
+      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
+      
+      <guid>https://ferygood.github.io/blog/post-1/</guid>
+      <description>Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
+    </item>
+    
+  </channel>
+</rss>
