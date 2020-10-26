@@ -6,21 +6,21 @@
     <description>Recent content in Statistics on Yao-Chung | Data Scientist</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sat, 24 Oct 2020 10:07:47 +0600</lastBuildDate><atom:link href="https://ferygood.github.io/categories/statistics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Oct 2020 10:07:47 +0800</lastBuildDate><atom:link href="https://ferygood.github.io/categories/statistics/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hypothesis Testing (NULL Hypothesis) 統計假設檢定</title>
+      <title>Hypothesis Testing 假設檢定</title>
       <link>https://ferygood.github.io/blog/post-2/</link>
-      <pubDate>Sat, 24 Oct 2020 10:07:47 +0600</pubDate>
+      <pubDate>Sun, 25 Oct 2020 10:07:47 +0800</pubDate>
       
       <guid>https://ferygood.github.io/blog/post-2/</guid>
-      <description>StatQuest (Hypothesis Testing) 假設檢定 StatQuest 系列都是版主看完影片整理的筆記，我並不擁有影片。
-   筆記重點：</description>
+      <description>StatQuest (Hypothesis Testing) 假設檢定    筆記重點：
+Null Hypothesis: There is no difference between things (虛無假設 代表兩者沒有差異)</description>
     </item>
     
     <item>
-      <title>基礎統計 Fundamental Statistics</title>
+      <title>Fundamental Statistics 基礎統計</title>
       <link>https://ferygood.github.io/blog/post-3/</link>
-      <pubDate>Sat, 24 Oct 2020 10:07:47 +0600</pubDate>
+      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
       
       <guid>https://ferygood.github.io/blog/post-3/</guid>
       <description>StatQuest (Fundamental Statistics) 基礎統計概念    前言：
