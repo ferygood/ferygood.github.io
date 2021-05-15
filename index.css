@@ -1,15 +1,18 @@
 body{
     margin: 0;
     padding: 0;
+    background-color: whitesmoke;
 }
 
 .container{
-    background-color: whitesmoke;
+   width: 1100px;
+   margin: 0px auto; /*東西置中*/
 }
 
 .container>.navigator{
     display:flex;
     flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 .container>.navigator>.tab{
@@ -21,4 +24,31 @@ body{
 
 .container>.navigator>.tab:hover{
     color: rgb(223, 151, 16);
+}
+
+.container>.About{
+    background-color: white;
+    display: flex;
+    flex: wrap;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; /*網上參考的 template */
+}
+
+.About>.image{
+    display: inline-block;
+    position: relative;
+    width: 250px;
+    height: 250px;
+    overflow:hidden;
+    border-radius: 50%;
+}
+
+.About>.image img{
+    width: auto;
+    height: 100%;
+}
+.About>.content{
+    font-size: 15px;
+    padding: 20px;
 }
