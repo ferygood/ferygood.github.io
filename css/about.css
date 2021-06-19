@@ -1,0 +1,27 @@
+.About >.photo {
+    grid-area: photo;
+    /* border: 1px solid red; */
+    margin: 30px 0px;
+}
+
+.About >.intro {
+    grid-area: intro;
+    /* border: 1px solid blue; */
+    margin: 30px 30px;
+    padding: 20px;
+    font-size: 25px;
+}
+
+.About {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-areas: "photo photo intro intro intro";
+    height: 360px;
+}
+
+.avatar {
+    display: block;
+    margin: auto auto;
+    width: 243px;
+    height: 243px;
+}

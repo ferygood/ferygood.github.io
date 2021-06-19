@@ -1,0 +1,62 @@
+.portfolio {
+    display: grid;
+    width: 1400px;
+    margin: auto;
+    /* grid-template-areas: 
+    "repo1 repo2 repo3"
+    "repo4 repo5 repo6"; */
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 30px 30px;
+    padding: 30px;
+}
+
+.portfolio >.item {
+    height: 350px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 5px 5px 3px rgb(123, 123, 123);
+    text-align: center;
+}
+
+.portfolio >.item >.pic {
+    width: 240px;
+    height: 180px;
+    margin: 5px;
+    justify-content: center;
+    background-color: teal;
+}
+
+.portfolio >.item >.desc{
+    width: 240px;
+    margin: 5px;
+    height: 120px;
+}
+
+.portfolio >.item >.more {
+    margin: 5px;
+    display: inline-block;
+    padding: 5px;
+    justify-content: center;
+    background-color: rgb(220, 220, 220);
+    color: black;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+.portfolio >.repo1 >.pic{
+    background-image: url("https://image.api.playstation.com/cdn/EP0700/CUSA14054_00/TPQCKhbCKCj8RY9NInKVEKPPVYPfEb28.png");
+    background-size: cover;
+}
+
+.portfolio >.repo2 >.pic{
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/738/62/544/naruto-chidori-naruto-naruto-uzumaki-rasengan-naruto-sasuke-uchiha-hd-wallpaper-preview.jpg");
+    background-size: cover;
+}
+
+.portfolio >.repo3 >.pic{
+    background-image: url("http://newtabsy.com/wp-content/uploads/2019/04/JoJos-Bizarre-Adventure-Wallpaper-21-1.jpg");
+    background-size: cover;
+}
+

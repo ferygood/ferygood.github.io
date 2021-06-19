@@ -1,0 +1,91 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(228, 228, 228);
+}
+
+/* sticky header */
+.container1 {
+    display: flex;
+    padding: 20px;
+    background-color: rgb(150, 181, 208);
+    position: sticky;
+    top: 0px;
+    color: white;
+    font-weight: bold;
+}
+
+.header {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 20%;
+    display: flex;
+}
+
+.menu {
+    display: flex;
+    flex-basis: 80%;
+    justify-content: flex-end;
+}
+
+.item {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+
+.hero {
+    height: 600px;
+    background-size: cover;
+    background-image: linear-gradient(180.43deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://images.unsplash.com/photo-1580411737935-de5d0312fd68?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80");
+}
+
+.hero > .content {
+    position: absolute;
+    top: 200px;
+    left: 10%;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+
+}
+
+#notes {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.hero > .content >.contact {
+    background-color: white;
+    color: black;
+    font-size: 25px;
+    display: inline;
+    padding: 10px 15px;
+}
+
+.hero > .content > .contact:hover{
+    background-color: rgb(141, 196, 77);
+}
+
+.footer {
+    display: flex;
+    background-color: rgb(2, 182, 134);
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+    /* border: 1px solid red; */
+}
+
+.footer >.item1 {
+    flex-basis: 30%;
+}
+
+.footer >.item2 {
+    display: flex;
+    justify-content: flex-end;
+    flex-basis: 70%;
+}
+
+.footer >.item2 >.item{
+    display: inline-block;
+    /* border: 1px solid blue; */
+}
