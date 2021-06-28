@@ -37,33 +37,19 @@ body{
 .hero {
     height: 600px;
     background-size: cover;
-    background-image: linear-gradient(180.43deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://images.unsplash.com/photo-1580411737935-de5d0312fd68?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80");
-}
-
-.hero > .content {
-    position: absolute;
-    top: 200px;
-    left: 10%;
+    background-image: linear-gradient(180.43deg, rgba(0,0,0,0.5), 
+                                    rgba(0,0,0,0.5)), 
+                       url("https://images.unsplash.com/photo-1580411737935-de5d0312fd68?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80");
     color: white;
     font-size: 50px;
     font-weight: bold;
-
+    padding-top: 200px;
+    padding-left: 100px;
 }
 
-#notes {
-    font-family: 'Josefin Sans', sans-serif;
-}
-
-.hero > .content >.contact {
-    background-color: white;
-    color: black;
-    font-size: 25px;
-    display: inline;
-    padding: 10px 15px;
-}
-
-.hero > .content > .contact:hover{
-    background-color: rgb(141, 196, 77);
+#contact_botton {
+    padding: 10px;
+    font-size: 30px;
 }
 
 .footer {
