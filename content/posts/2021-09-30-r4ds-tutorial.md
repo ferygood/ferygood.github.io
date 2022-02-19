@@ -5,7 +5,7 @@ tags:
     - R
     - DataScience
 categories:
-- tutorial
+    - tutorial
 keywords:
     - r4ds
 ---
