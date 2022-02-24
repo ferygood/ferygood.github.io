@@ -2,7 +2,7 @@
   "list": [
     {
       "name":"TEKRABber",
-      "url":"https://github.com/ferygood/TEKRABber",
+      "url":"https://bioconductor.org/packages/3.15/bioc/html/TEKRABber.html",
       "desc":"An Bioconductor package for DE and correlation analysis comparing between species"
     }
   ]
