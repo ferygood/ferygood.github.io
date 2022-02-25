@@ -21,5 +21,21 @@ I first pinpoint the topics for today:
 5. Maximum likelihood, estimate, estimators
 6. Confidence coefficient
 7. F-distribution 
-8. ANOVAs
+8. ANOVAs  
+
+I just want to test codes in python and R  
+
+```python
+# python code
+x = 1
+y = 2
+print(x+y)
+```
+
+```r
+# r code
+x <- 1
+y <- 2
+print(x+y)
+```
 
