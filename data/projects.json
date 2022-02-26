@@ -1,9 +1,0 @@
-{
-  "list": [
-    {
-      "name":"TEKRABber",
-      "url":"https://bioconductor.org/packages/3.15/bioc/html/TEKRABber.html",
-      "desc":"An R/Bioconductor package for DE and correlation analysis comparing between species"
-    }
-  ]
-}
