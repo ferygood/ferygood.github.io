@@ -31,8 +31,8 @@ enableEmoji = true
   orgName = ""
   orgLocal = "Anywhere"
   description = "Personal Website (Yao-Chung Chen)."
-  favicon = "/img/favicon.ico"
-  logo = "/img/goofy.jpeg"
+  favicon = "/img/brain.ico"
+  logo = "/img/brain.png"
   mainSections = ["blog", "project", "talk"]
   navallcaps = true
   # show/hide social icons in site header & footer
