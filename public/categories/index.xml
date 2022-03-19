@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Yao Page</title>
+    <link>https://ferygood.github.io/categories/</link>
+    <description>Recent content in Categories on Yao Page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Yao-Chung Chen</copyright>
+    <lastBuildDate>Sun, 27 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://ferygood.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>network science</title>
+      <link>https://ferygood.github.io/categories/network-science/</link>
+      <pubDate>Sun, 27 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://ferygood.github.io/categories/network-science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bioconductor</title>
+      <link>https://ferygood.github.io/categories/bioconductor/</link>
+      <pubDate>Tue, 15 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://ferygood.github.io/categories/bioconductor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ortholog</title>
+      <link>https://ferygood.github.io/categories/ortholog/</link>
+      <pubDate>Tue, 15 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://ferygood.github.io/categories/ortholog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>package</title>
+      <link>https://ferygood.github.io/categories/package/</link>
+      <pubDate>Tue, 15 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://ferygood.github.io/categories/package/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>https://ferygood.github.io/categories/r/</link>
+      <pubDate>Tue, 15 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://ferygood.github.io/categories/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>transposable elements</title>
+      <link>https://ferygood.github.io/categories/transposable-elements/</link>
+      <pubDate>Tue, 15 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://ferygood.github.io/categories/transposable-elements/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>workshop</title>
+      <link>https://ferygood.github.io/categories/workshop/</link>
+      <pubDate>Tue, 12 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ferygood.github.io/categories/workshop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>meetup</title>
+      <link>https://ferygood.github.io/categories/meetup/</link>
+      <pubDate>Fri, 01 Jan 2021 14:15:59 -0600</pubDate>
+      
+      <guid>https://ferygood.github.io/categories/meetup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Theme Features</title>
+      <link>https://ferygood.github.io/categories/theme-features/</link>
+      <pubDate>Wed, 03 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://ferygood.github.io/categories/theme-features/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

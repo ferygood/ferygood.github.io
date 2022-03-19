@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ortholog on Yao Page</title>
+    <link>https://ferygood.github.io/categories/ortholog/</link>
+    <description>Recent content in ortholog on Yao Page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Yao-Chung Chen</copyright>
+    <lastBuildDate>Tue, 15 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://ferygood.github.io/categories/ortholog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TEKRABber</title>
+      <link>https://ferygood.github.io/project/tekrabber/</link>
+      <pubDate>Tue, 15 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://ferygood.github.io/project/tekrabber/</guid>
+      <description>Introduction     The name of TEKRABber comes from the idea that the largest group of transcription factors, Krüppel-associated box (KRAB) domain-containing zinc-finger play a role as a grabber of transposable elements (TEs). The aim of developing TEKRABber is to provide a user-friendly tool to estimate the correlations in selected orthologs and transposable elements between two selected species. It takes the advantage by using the orthology information to normalize expression counts, setting one species as a reference and the other as a compare one.</description>
+    </item>
+    
+  </channel>
+</rss>
