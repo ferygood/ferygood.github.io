@@ -1,5 +1,6 @@
 ---
 date: "2021-01-02"
+draft: true
 excerpt: In this block, we'll use the postcards package to make a single 'about' home
   page with only R Markdown.
 subtitle: Write and send a single postcard.

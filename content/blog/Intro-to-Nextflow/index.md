@@ -12,12 +12,14 @@ tags:
 - hugo-site
 title: Introduction to Nextflow
 ---
+Currently learning Nextflow to wrap my workflow in a structural way.
+Here are some useful resources:
++ Official website: https://www.nextflow.io/
++ nf-core: https://nf-co.re/
++ Learning documentation: https://training.seqera.io/
 
-Useful resources:
-1. Official website: https://www.nextflow.io/
-2. nf-core: https://nf-co.re/
-3. Learning documentation: https://training.seqera.io/  
+  
+I also start writing my script in nexflow. You can find more detail in [here](https://github.com/ferygood/nf-STAR-TEtranscript) on my github.
 
-I also start writing my script in nexflow. You can find more detail here: https://github.com/ferygood/nf-STAR-TEtranscript
 ---
 
