@@ -1,7 +1,7 @@
 ---
-author: The R Markdown Team @RStudio
+author: Yao-Chung Chen
 cascade:
-  author: The R Markdown Team @RStudio
+  author: Yao-Chung Chen
   show_author_byline: true
   show_comments: false
   show_post_date: true
