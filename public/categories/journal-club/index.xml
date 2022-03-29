@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>journal club on Yao Page</title>
+    <link>https://ferygood.github.io/categories/journal-club/</link>
+    <description>Recent content in journal club on Yao Page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Yao-Chung Chen</copyright>
+    <lastBuildDate>Tue, 25 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://ferygood.github.io/categories/journal-club/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction of Git/GitHub/GitLab</title>
+      <link>https://ferygood.github.io/talk/intro-to-git-github/</link>
+      <pubDate>Tue, 25 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://ferygood.github.io/talk/intro-to-git-github/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

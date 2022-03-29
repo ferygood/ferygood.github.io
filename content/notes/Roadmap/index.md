@@ -11,5 +11,5 @@ Here are some useful links provided by Mia after mentoring club:
 + Ted Talk, [The best career path isn't always a straight line](https://www.youtube.com/watch?v=1ALfKWG2nmw)
 + Comments about Germany Cooperation, salary, [Kununu](https://www.kununu.com/)
 + Coursera ML course by Andrew Ng, [link](https://www.coursera.org/learn/machine-learning)
-+ AWS Doc, good to study by oneself [link](AWS ramp up guide)
++ AWS Doc, good to study by oneself [link](https://aws.amazon.com/training/ramp-up-guides/)
 + Mia's IThelp writings, find [here](https://ithelp.ithome.com.tw/users/20103632/ironman)
