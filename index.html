@@ -14,6 +14,9 @@
   <style>
     .fa-brands, .fa-solid {color: #0abab5;}
     * {font-family: 'Roboto', sans-serif; color: #565656;}
+    .my-badge {
+      color: black; border-radius: 1em; border-color: #0abab5; border-style: solid; border-width: 1px; font-size: 1em;
+    }
   </style>
 </head>
 <body class="bg-light">
@@ -23,26 +26,20 @@
   <div class="row justify-content-md-center">
     
     <!--left container start-->
-    <div class="col-sm-3 my-3">
+    <div class="col-sm-3 my-4">
       <div class="card shadow border">
         <div class="card-body">
           <img src="img/yao.jpg" alt="card image" class="card-img-top">
-          <h4 class="card-title">Yao-Chung Chen</h4>
+          <h4 class="card-title my-2">Yao-Chung Chen</h4>
           
           <i class="fa-solid fa-graduation-cap fa-fw"></i> &nbsp;PhD Student<br>
           <i class="fa-solid fa-earth-europe fa-fw"></i> &nbsp;Berlin, Germany<br>
-          <hr>
-          <h6>Skills</h6>
-          <i class="fa-brands fa-python"></i>
-          <i class="fa-brands fa-r-project"></i>
-          <i class="fa-brands fa-git"></i>
-          <i class="fa-brands fa-linux"></i>
           <hr>
           <a href="#" class="btn btn-primary">Contact</a>
         </div>
       </div>
     </div>
-    <!--left container end-->
+    
     
     <!--right container start-->
     <div class="col-sm-9 bg-light my-3">
@@ -65,17 +62,58 @@
           </p>
         </div>
       </div>
-      <!--Education end-->
-
+     
+      
       <!--Project start-->
       <div class="col shadow my-2 bg-white border p-3">
-        <i class="fa-solid fa-laptop-code fa-2x fa-fw"></i><span style="font-size: 2em">&nbsp;&nbsp;Projects</span>
+        <i class="fa-solid fa-folder-open fa-2x fa-fw"></i><span style="font-size: 2em">&nbsp;&nbsp;Projects</span>
         <div class="col my-2 mx-2 bg-white">
-          <p>TEKRABber is a Bioconductor package.</p>
+          <p style="font-size: 1.2em;">TEKRABber</p>
+          <p>
+            <a href="https://bioconductor.org/packages/devel/bioc/html/TEKRABber.html">TEKRABber</a> is a 
+            Bioconductor open source package which can estimate the correlation of KRAB-Zinc-Finger 
+            genes and transposable elements comparing between two species. It is written in R and computation of correlation analysis 
+            is speed-up using Rcpp.
+          </p>
+          <span class="badge my-badge"><img src="img/Bioconductor.png" alt="Bioconductor" style="height: 1.2em">&nbsp;&nbsp;Bioconductor</span>
+          <span class="badge my-badge"><img src="img/Rlogo.png" alt="R" style="height: 1.2em">&nbsp;&nbsp;R Package</span>
+        </div>
+        <hr>
+
+      </div>
+      
+
+      <!--Hard Skills start-->
+      <div class="col shadow my-2 bg-white border p-3">
+        <i class="fa-solid fa-laptop-code fa-2x fa-fw"></i><span style="font-size: 2em;">&nbsp;&nbsp;Hard Skills</span>
+        <div class="col my-2 mx-2 bg-white">
+          <p style="font-size: 1.2em;">Programing skills</p>
+          <table class="table table-bordered">
+            <tbody>
+              <tr>
+                <td>
+                  <img src="img/python.png" alt="python" style="height: 1.2em;">&nbsp;
+                  <img src="img/Rlogo.png" alt="R" style="height: 1.2em;">
+                </td>
+                <td>Data Analysis, Software Development</td>
+              </tr>
+            </tbody>
+          </table>
+          <p style="font-size: 1.2em;">Workflow</p>
+          <table class="table table-bordered">
+            <tbody>
+              <tr>
+                <td>
+                  <img src="img/nextflow.png" alt="nextflow" style="height: 1.2em;">&nbsp;
+                </td>
+                <td>Pipeline development</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
       </div>
-      <!--Project end-->
+      
       
       <!--Contact start-->
       <div class="col shadow my-2 bg-white border p-3">
