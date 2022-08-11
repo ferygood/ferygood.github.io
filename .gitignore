@@ -3,3 +3,4 @@
 .Rdata
 /.quarto/
 .Rproj.user
+_site/
