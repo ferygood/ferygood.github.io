@@ -1,9 +1,8 @@
 ---
-title: "Yao-Chung"
 listing:
   - id: my-posts
-    contents: "*/*.qmd"
-    type: default
+    contents: "*/index.qmd"
+    type: grid
     fields: [image, date, title, subtitle, categories, author, reading-time]  
     sort: "date desc"
     # categories: cloud
@@ -13,6 +12,7 @@ listing:
 page-layout: full
 title-block-banner: false
 comments: false
+toc: true
 ---
 
 ## Posts
