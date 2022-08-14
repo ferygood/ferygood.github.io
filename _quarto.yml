@@ -1,0 +1,37 @@
+project:
+  type: website
+
+website:
+  title: "Yao-Chung"
+  site-url: "https://ferygood.github.io"
+  google-analytics: "UA-181333208-1"
+  page-footer: "Yao-Chung Chen © All Rights Reserved. 2022"
+  favicon: img/brain.ico
+  navbar:
+    logo: img/brain.png
+    right:
+      - about.qmd
+      - text: Posts
+        href: posts/posts.qmd
+      - text: Projects
+        href: projects/projects.qmd
+      - text: Resume
+        href: https://ferygood.github.io/resume/
+        
+      - icon: github
+        href: https://github.com/ferygood
+      - icon: linkedin
+        href: https://www.linkedin.com/in/yao-chung-chen-3a0129173/
+      - icon: envelope
+        href: mailto:yaochung41@gmail.com
+        
+format:
+  html:
+    theme: 
+      light: flatly
+      dark: darkly
+    css: styles.css
+    toc: true
+
+editor: visual
+
