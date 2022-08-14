@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code."
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "Since this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "posts/nextflow-tutorial/index.html",
+    "href": "posts/nextflow-tutorial/index.html",
+    "title": "Nextflow tutorial",
+    "section": "",
+    "text": "The popular workflow language Nextflow has released their latest tutorial this year. Find the tutorials here"
+  },
+  {
+    "objectID": "projects/TEKRABber/index.html",
+    "href": "projects/TEKRABber/index.html",
+    "title": "Yao-Chung",
+    "section": "",
+    "text": "TEKRABber is a Bioconductor package published early this year."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Yao-Chung",
+    "section": "",
+    "text": "Aug 14, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAug 11, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAug 8, 2022\n\n\n\n\n\n\n\n\nNo matching items\n\n\nAll posts"
+  },
+  {
+    "objectID": "index.html#projects",
+    "href": "index.html#projects",
+    "title": "Yao-Chung",
+    "section": "Projects",
+    "text": "Projects\n\n\n\n\n\n\n \n\n\n\nTEKRABber\n\n\n\n\n\n\n\nNo matching items\n\n\nAll projects"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "I am currently a Ph.D. student at Nowick Lab at the Department of Mathematics and Computer Science, Freie Universität Berlin. My work is mainly focusing on developing algorithms to analyze monoallelic expression data from Alzheimer’s Disease patients. I also develop pipeline to estimate the expression of KRAB-Zinc-Finger genes and transposable elements comparing between two different species. I am fascinated by learning and implement machine learning to solve real world problems!"
+  }
+]
