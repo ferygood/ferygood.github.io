@@ -1,6 +1,5 @@
 ---
 listing:
-  - id: my-posts
     contents: "*/index.qmd"
     type: grid
     fields: [image, date, title, subtitle, categories, author, reading-time]  
@@ -12,7 +11,8 @@ listing:
 page-layout: full
 title-block-banner: false
 comments: false
-toc: true
+toc: false
+draft: true
 ---
 
 ## Posts

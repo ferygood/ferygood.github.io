@@ -12,11 +12,11 @@ website:
     right:
       - about.qmd
       - text: Posts
-        href: posts/index.qmd
+        href: posts/posts.qmd
       - text: Projects
-        href: projects/index.qmd
+        href: projects/projects.qmd
       - text: Resume
-        href: https://google.com
+        href: https://ferygood.github.io/resume/
         
       - icon: github
         href: https://github.com/ferygood
