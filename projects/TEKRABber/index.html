@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Yao-Chung Chen">
+<meta name="dcterms.date" content="2022-08-15">
 
-<title>Yao-Chung – index</title>
+<title>Yao-Chung - TEKRABber</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -15,6 +17,88 @@ span.underline{text-decoration: underline;}
 div.column{display: inline-block; vertical-align: top; width: 50%;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -135,23 +219,358 @@ ga('send', {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#tekrabber" id="toc-tekrabber" class="nav-link active" data-scroll-target="#tekrabber">TEKRABber</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">Installation</a></li>
+  <li><a href="#comparing-between-two-species" id="toc-comparing-between-two-species" class="nav-link" data-scroll-target="#comparing-between-two-species">1. Comparing between two species</a></li>
+  <li><a href="#query-ortholog-information-and-estimate-scaling-factor" id="toc-query-ortholog-information-and-estimate-scaling-factor" class="nav-link" data-scroll-target="#query-ortholog-information-and-estimate-scaling-factor">1.1 Query ortholog information and estimate scaling factor</a></li>
+  <li><a href="#create-inputs-for-differentially-expressed-analysis-and-correlation-estimation" id="toc-create-inputs-for-differentially-expressed-analysis-and-correlation-estimation" class="nav-link" data-scroll-target="#create-inputs-for-differentially-expressed-analysis-and-correlation-estimation">1.2 Create inputs for differentially expressed analysis and correlation estimation</a></li>
+  <li><a href="#differentially-expressed-analysis-de-analysis" id="toc-differentially-expressed-analysis-de-analysis" class="nav-link" data-scroll-target="#differentially-expressed-analysis-de-analysis">1.3 Differentially expressed analysis (DE analysis)</a></li>
+  <li><a href="#correlation-analysis" id="toc-correlation-analysis" class="nav-link" data-scroll-target="#correlation-analysis">1.4 Correlation analysis</a></li>
+  <li><a href="#explore-your-result-using-apptekrabber" id="toc-explore-your-result-using-apptekrabber" class="nav-link" data-scroll-target="#explore-your-result-using-apptekrabber">1.5 Explore your result using <code>appTEKRABber()</code>:</a></li>
+  <li><a href="#comparing-control-and-treatment-samples-within-the-same-species" id="toc-comparing-control-and-treatment-samples-within-the-same-species" class="nav-link" data-scroll-target="#comparing-control-and-treatment-samples-within-the-same-species">2. Comparing control and treatment samples within the same species</a></li>
+  <li><a href="#de-analysis" id="toc-de-analysis" class="nav-link" data-scroll-target="#de-analysis">2.1 DE analysis</a></li>
+  <li><a href="#correlation-analysis-1" id="toc-correlation-analysis-1" class="nav-link" data-scroll-target="#correlation-analysis-1">2.2 Correlation analysis</a></li>
+  <li><a href="#explore-your-result-using-apptekrabber-1" id="toc-explore-your-result-using-apptekrabber-1" class="nav-link" data-scroll-target="#explore-your-result-using-apptekrabber-1">2.3 Explore your result using <code>appTEKRABber()</code>:</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References:</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">TEKRABber</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Bioconductor</div>
+    <div class="quarto-category">R</div>
+    <div class="quarto-category">software</div>
+    <div class="quarto-category">transposable elements</div>
+    <div class="quarto-category">correlation</div>
+  </div>
+  </div>
 
 
-<section id="tekrabber" class="level1">
-<h1>TEKRABber</h1>
-<p>TEKRABber is a Bioconductor package published early this year.</p>
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Yao-Chung Chen </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 15, 2022</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<p><a href="https://bioconductor.org/packages/release/bioc/html/TEKRABber.html">TEKRABber</a> is a Bioconductor package I published early this year. It is made to provide a user-friendly pipeline for <strong>comparing orthologs and transposable elements (TEs) between two species.</strong> It considers the orthology confidence between two species from BioMart to normalize expression counts and detect differentially expressed orthologs/TEs. Then it provides one to one correlation analysis for desired orthologs and TEs. There is also an app function to have a first insight on the result. Users can prepare orthologs/TEs RNA-seq expression data by their own preference to run <a href="https://bioconductor.org/packages/release/bioc/html/TEKRABber.html">TEKRABber</a> following the data structure mentioned in the following demo.</p>
+<p>Although <a href="https://bioconductor.org/packages/release/bioc/html/TEKRABber.html">TEKRABber</a> is developed to compare between species, you can still use it for experiment which compare control and treatment in the same species. If you are more interest in this, you may directly jump to the second half of this article.</p>
+</section>
+<section id="installation" class="level3">
+<h3 class="anchored" data-anchor-id="installation">Installation</h3>
+<p>For a stable version, I recommend download <a href="https://bioconductor.org/packages/release/bioc/html/TEKRABber.html">TEKRABber</a> from Bioconductor archive.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"BiocManager"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="st">"TEKRABber"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(TEKRABber)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(SummarizedExperiment) <span class="co"># load it if you are following this tutorial</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="comparing-between-two-species" class="level3">
+<h3 class="anchored" data-anchor-id="comparing-between-two-species">1. Comparing between two species</h3>
+<p>In the first example, we randomly generated/picked gene and transposable elements (TE) expression data from 10 humans and 10 chimpanzees <span class="citation" data-cites="khrameeva2020">(<a href="#ref-khrameeva2020" role="doc-biblioref">Khrameeva et al. 2020</a>)</span>. The values for the first column of gene and TE count table must be <strong>Ensembl gene ID</strong> and <strong>TE name</strong>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load built-in data</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(speciesCounts)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>hmGene <span class="ot">&lt;-</span> speciesCounts<span class="sc">$</span>hmGene</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>hmTE <span class="ot">&lt;-</span> speciesCounts<span class="sc">$</span>hmTE</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>chimpGene <span class="ot">&lt;-</span> speciesCounts<span class="sc">$</span>chimpGene</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>chimpTE <span class="ot">&lt;-</span> speciesCounts<span class="sc">$</span>chimpTE</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># the first column must be Ensembl gene ID for gene, and TE name for TE</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(hmGene)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>           Geneid SRR8750453 SRR8750454 SRR8750455 SRR8750456 SRR8750457
+1 ENSG00000000003        250        267        227        286        128
+2 ENSG00000000005         13          2         15          9          5
+3 ENSG00000000419        260        311        159        259        272
+4 ENSG00000000457         86        131        100         94         80
+5 ENSG00000000460         21         17         42         33         55
+6 ENSG00000000938        162         75         95        252        195
+  SRR8750458 SRR8750459 SRR8750460 SRR8750461 SRR8750462
+1        394        268        102        370        244
+2          0          1          8          0          2
+3        408        371        126        211        374
+4        158        119         46         77         81
+5         29         50         11         18         20
+6        137         93        108        197         69</code></pre>
+</div>
+</div>
+</section>
+<section id="query-ortholog-information-and-estimate-scaling-factor" class="level3">
+<h3 class="anchored" data-anchor-id="query-ortholog-information-and-estimate-scaling-factor">1.1 Query ortholog information and estimate scaling factor</h3>
+<p>In the first step, we use <code>orthologScale()</code> to get orthology information and calculate the scaling factor between two species. The species name needs to be the abbreviation of scientific species name used in Ensembl. (Note: (1)This step queries information using <a href="https://bioconductor.org/packages/3.15/biomaRt"><em>biomaRt</em></a> and it might need some time or try different mirrors due to the connections to Ensembl (2)It might take some time to calculate scaling factor based on your data size).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># You can use the code below to search for species name</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>ensembl <span class="ot">&lt;-</span> biomaRt<span class="sc">::</span><span class="fu">useEnsembl</span>(<span class="at">biomart =</span> <span class="st">"genes"</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(biomaRt<span class="sc">::</span><span class="fu">listDatasets</span>(ensembl))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                       dataset                           description
+1 abrachyrhynchus_gene_ensembl Pink-footed goose genes (ASM259213v1)
+2     acalliptera_gene_ensembl      Eastern happy genes (fAstCal1.2)
+3   acarolinensis_gene_ensembl       Green anole genes (AnoCar2.0v2)
+4    acchrysaetos_gene_ensembl       Golden eagle genes (bAquChr1.2)
+5    acitrinellus_gene_ensembl        Midas cichlid genes (Midas_v5)
+6    amelanoleuca_gene_ensembl       Giant panda genes (ASM200744v2)
+      version
+1 ASM259213v1
+2  fAstCal1.2
+3 AnoCar2.0v2
+4  bAquChr1.2
+5    Midas_v5
+6 ASM200744v2</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># In order to save time, we have save the data for this tutorial.</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(fetchDataHmChimp)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>fetchData <span class="ot">&lt;-</span> fetchDataHmChimp</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Query the data and calculate scaling factor using orthologScale():</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co"># fetchData &lt;- orthologScale(</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co">#     geneCountRef = hmGene,</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="co">#     geneCountCompare = chimpGene,</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co">#     speciesRef = "hsapiens",</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co">#     speciesCompare = "ptroglodytes"</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="co"># )</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="create-inputs-for-differentially-expressed-analysis-and-correlation-estimation" class="level3">
+<h3 class="anchored" data-anchor-id="create-inputs-for-differentially-expressed-analysis-and-correlation-estimation">1.2 Create inputs for differentially expressed analysis and correlation estimation</h3>
+<p>We use <code>DECorrInputs()</code> to return inputs files for downstream analysis.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>inputBundle <span class="ot">&lt;-</span> <span class="fu">DECorrInputs</span>(</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">orthologTable =</span> fetchData<span class="sc">$</span>orthologTable,</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">scaleFactor =</span> fetchData<span class="sc">$</span>scaleFactor,</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">geneCountRef =</span> hmGene,</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">geneCountCompare =</span> chimpGene,</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">teCountRef =</span> hmTE,</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">teCountCompare =</span> chimpTE</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="differentially-expressed-analysis-de-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="differentially-expressed-analysis-de-analysis">1.3 Differentially expressed analysis (DE analysis)</h3>
+<p>In this step, we need to generate a metadata contain species name (i.e., human and chimpanzee). The row names need to be same as the DE input table and the column name must be <strong>species</strong> (see the example below). Then we use <code>DEgeneTE()</code> to perform DE analysis. When you are comparing samples between two species, the parameter <strong>expDesign</strong> should be <strong>TRUE</strong> (as default).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>meta <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">species =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"human"</span>, <span class="fu">ncol</span>(hmGene) <span class="sc">-</span> <span class="dv">1</span>), </span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rep</span>(<span class="st">"chimpanzee"</span>, <span class="fu">ncol</span>(chimpGene) <span class="sc">-</span> <span class="dv">1</span>))</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>meta<span class="sc">$</span>species <span class="ot">&lt;-</span> <span class="fu">factor</span>(meta<span class="sc">$</span>species, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"human"</span>, <span class="st">"chimpanzee"</span>))</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(meta) <span class="ot">&lt;-</span> <span class="fu">colnames</span>(inputBundle<span class="sc">$</span>geneInputDESeq2)</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>hmchimpDE <span class="ot">&lt;-</span> <span class="fu">DEgeneTE</span>(</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">geneTable =</span> inputBundle<span class="sc">$</span>geneInputDESeq2,</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">teTable =</span> inputBundle<span class="sc">$</span>teInputDESeq2,</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">metadata =</span> meta,</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">expDesign =</span> <span class="cn">TRUE</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="correlation-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="correlation-analysis">1.4 Correlation analysis</h3>
+<p>Here we use <code>corrOrthologTE()</code> to perform correlation estimation comparing each ortholog and TE. This is the most time-consuming step if you have large data. For a quick demonstration, we use a relatively small data. You can specify the correlation method and adjusted <em>p-value</em> method. The default methods are Pearson’s correlation and FDR. <strong>Note:</strong> For more efficient and specific analysis, you can subset your data in this step to focus on only the orthologs and TEs that you are interested in.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load built-in data</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(speciesCorr)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>hmGeneCorrInput <span class="ot">&lt;-</span> <span class="fu">assay_tekcorrset</span>(speciesCorr, <span class="st">"gene"</span>, <span class="st">"human"</span>)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>hmTECorrInput <span class="ot">&lt;-</span> <span class="fu">assay_tekcorrset</span>(speciesCorr, <span class="st">"te"</span>, <span class="st">"human"</span>)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>chimpGeneCorrInput <span class="ot">&lt;-</span> <span class="fu">assay_tekcorrset</span>(speciesCorr, <span class="st">"gene"</span>, <span class="st">"chimpanzee"</span>)</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>chimpTECorrInput <span class="ot">&lt;-</span> <span class="fu">assay_tekcorrset</span>(speciesCorr, <span class="st">"te"</span>, <span class="st">"chimpanzee"</span>)</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>hmCorrResult <span class="ot">&lt;-</span> <span class="fu">corrOrthologTE</span>(</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">geneInput =</span> hmGeneCorrInput,</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">teInput =</span> hmTECorrInput,</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">corrMethod =</span> <span class="st">"pearson"</span>,</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">padjMethod =</span> <span class="st">"fdr"</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>chimpCorrResult <span class="ot">&lt;-</span> <span class="fu">corrOrthologTE</span>(</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">geneInput =</span> chimpGeneCorrInput,</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">teInput =</span> chimpTECorrInput,</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">corrMethod =</span> <span class="st">"pearson"</span>,</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">padjMethod =</span> <span class="st">"fdr"</span></span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(hmCorrResult)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>         geneName      teName      pvalue        coef      padj
+1 ENSG00000143125        L1MD 0.271964872  0.38497828 0.9990235
+2 ENSG00000143125        MSTA 0.335873091  0.34036703 0.9990235
+3 ENSG00000143125  MLT1N2-int 0.966658172  0.01524552 0.9990235
+4 ENSG00000143125       LTR57 0.067870603  0.59794954 0.9990235
+5 ENSG00000143125 HERVK11-int 0.001028058  0.87118988 0.3210294
+6 ENSG00000143125        LTR5 0.855235258 -0.06647109 0.9990235</code></pre>
+</div>
+</div>
+</section>
+<section id="explore-your-result-using-apptekrabber" class="level3">
+<h3 class="anchored" data-anchor-id="explore-your-result-using-apptekrabber">1.5 Explore your result using <code>appTEKRABber()</code>:</h3>
+<p><a href="https://bioconductor.org/packages/3.15/TEKRABber">TEKRABber</a> provides an app function for you to quickly view your result. First, you will need to assign the differentially expressed orthologs/TEs results, correlation results and metadata as global variables: <code>appDE</code>, <code>appRef</code>, <code>appCompare</code> and <code>appMeta</code>. See the following example.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">#create global variables for app-use</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>appDE <span class="ot">&lt;-</span> hmchimpDE</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>appRef <span class="ot">&lt;-</span> hmCorrResult</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>appCompare <span class="ot">&lt;-</span> chimpCorrResult</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>appMeta <span class="ot">&lt;-</span> meta <span class="co"># this is the same one in DE analysis</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="fu">appTEKRABber</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><img src="images/de.png" class="img-fluid"></p>
+<p>The <strong>Expression tab</strong> show selected genes and TEs in boxplot. It also provide DE information and correlation statistics.</p>
+<p><img src="images/corr.png" class="img-fluid"></p>
+<p>In the <strong>Correlation tab</strong> page (above figure), you can select your data in scatter plots in three ways. <strong>(1)</strong> Specify the data point and it will turn red in the distribution of your results <strong>(2)</strong> Show the distribution of all the data from your correlation results based on their correlation coefficients and adjusted <em>p-value</em>. The blue vertical dashed line indicates the boundary of adjusted <em>p-value</em> is 0.05, and the orange one is for adjusted <em>p-value</em> 0.01 <strong>(3)</strong> you can click the data points which you are interested in, and it will be listed in the table. You can also drag a certain area to show data points in it.</p>
+</section>
+<section id="comparing-control-and-treatment-samples-within-the-same-species" class="level3">
+<h3 class="anchored" data-anchor-id="comparing-control-and-treatment-samples-within-the-same-species">2. Comparing control and treatment samples within the same species</h3>
+<p>If you want to compare selected genes and TEs <strong>(1)</strong> from different tissue in same species or <strong>(2)</strong> control and drug treatment in same tissue in same species, please generate all the input files following the input format. Here we show an example data of prepared input files including expression counts from 10 control and 10 treatment samples. The format of input data: row names should be gene name or id, and column name is your sample id (please see details below).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load built-in data</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(ctInputDE)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>geneInputDE <span class="ot">&lt;-</span> ctInputDE<span class="sc">$</span>gene</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>teInputDE <span class="ot">&lt;-</span> ctInputDE<span class="sc">$</span>te</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="co"># you need to follow the input format as below</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(geneInputDE)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                control_1 control_2 control_3 control_4 control_5 treatment_6
+ENSG00000180263      1470      2072      1864      2238      2246        2599
+ENSG00000185985      1599      1045       946      1642      2199         665
+ENSG00000144355       517       380      1211       812        48         388
+ENSG00000234003         4         4        14        10         5           9
+ENSG00000257342         1         1         1         2         3           3
+ENSG00000223953       259       830       133       258       850         504
+                treatment_7 treatment_8 treatment_9 treatment_10
+ENSG00000180263        2679        2562        2532         2682
+ENSG00000185985        1023        2477        1423         1731
+ENSG00000144355         275         633          59          248
+ENSG00000234003           4          18          13           22
+ENSG00000257342           0           6           1            5
+ENSG00000223953        1143        1500         498          864</code></pre>
+</div>
+</div>
+</section>
+<section id="de-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="de-analysis">2.1 DE analysis</h3>
+<p>For DE analysis in the same species, you also use <code>DEgeneTE()</code> function, however, you need to set the parameter <strong>expDesign</strong> to <strong>FALSE</strong>. You also need to provide a metadata which this time the column name must be <strong>experiment</strong>. See demonstration below:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>metaExp <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">experiment =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"control"</span>, <span class="dv">5</span>), <span class="fu">rep</span>(<span class="st">"treatment"</span>, <span class="dv">5</span>)))</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(metaExp) <span class="ot">&lt;-</span> <span class="fu">colnames</span>(geneInputDE)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>metaExp<span class="sc">$</span>experiment <span class="ot">&lt;-</span> <span class="fu">factor</span>(</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    metaExp<span class="sc">$</span>experiment, </span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"control"</span>, <span class="st">"treatment"</span>)</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>resultDE <span class="ot">&lt;-</span> <span class="fu">DEgeneTE</span>(</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">geneTable =</span> geneInputDE,</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">teTable =</span> teInputDE,</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">metadata =</span> metaExp,</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">expDesign =</span> <span class="cn">FALSE</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="correlation-analysis-1" class="level3">
+<h3 class="anchored" data-anchor-id="correlation-analysis-1">2.2 Correlation analysis</h3>
+<p>For a quick demonstration to perform correlation of genes and TEs in control and treatment sample, we use relatively small input tables which only include 10 genes and 10 TEs.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load built-in data</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(ctCorr)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>geneConCorrInput <span class="ot">&lt;-</span> <span class="fu">assay_tekcorrset</span>(ctCorr, <span class="st">"gene"</span>, <span class="st">"control"</span>)</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>teConCorrInput <span class="ot">&lt;-</span> <span class="fu">assay_tekcorrset</span>(ctCorr, <span class="st">"te"</span>, <span class="st">"control"</span>)</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>geneTreatCorrInput <span class="ot">&lt;-</span> <span class="fu">assay_tekcorrset</span>(ctCorr, <span class="st">"gene"</span>, <span class="st">"treatment"</span>)</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>teTreatCorrInput <span class="ot">&lt;-</span> <span class="fu">assay_tekcorrset</span>(ctCorr, <span class="st">"te"</span>, <span class="st">"treatment"</span>)</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="co"># you need to follow the input format as below</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(geneConCorrInput)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                control_1 control_2 control_3 control_4 control_5
+ENSG00000180263      1470      2072      1864      2238      2246
+ENSG00000185985      1599      1045       946      1642      2199
+ENSG00000144355       517       380      1211       812        48
+ENSG00000234003         4         4        14        10         5
+ENSG00000257342         1         1         1         2         3
+ENSG00000223953       259       830       133       258       850</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>controlCorr <span class="ot">&lt;-</span> <span class="fu">corrOrthologTE</span>(</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">geneInput =</span> geneConCorrInput,</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">teInput =</span> teConCorrInput,</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">corrMethod =</span> <span class="st">"pearson"</span>,</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">padjMethod =</span> <span class="st">"fdr"</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>treatmentCorr <span class="ot">&lt;-</span> <span class="fu">corrOrthologTE</span>(</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">geneInput =</span> geneTreatCorrInput,</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">teInput =</span> teTreatCorrInput,</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">corrMethod =</span> <span class="st">"pearson"</span>,</span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">padjMethod =</span> <span class="st">"fdr"</span></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(treatmentCorr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>         geneName teName    pvalue       coef      padj
+1 ENSG00000180263    ALU 0.7350708 -0.2096204 0.8750842
+2 ENSG00000180263  AluJb 0.6463988 -0.2814802 0.8729353
+3 ENSG00000180263  AluJo 0.5879945 -0.3296607 0.8399922
+4 ENSG00000180263  AluJr 0.6080013 -0.3130670 0.8563399
+5 ENSG00000180263 AluJr4 0.7158070 -0.2251209 0.8729353
+6 ENSG00000180263  AluSc 0.7130150 -0.2273721 0.8729353</code></pre>
+</div>
+</div>
+</section>
+<section id="explore-your-result-using-apptekrabber-1" class="level3">
+<h3 class="anchored" data-anchor-id="explore-your-result-using-apptekrabber-1">2.3 Explore your result using <code>appTEKRABber()</code>:</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>appDE <span class="ot">&lt;-</span> resultDE</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>appRef <span class="ot">&lt;-</span> controlCorr</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>appCompare <span class="ot">&lt;-</span> treatmentCorr</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>appMeta <span class="ot">&lt;-</span> metaExp</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="fu">appTEKRABber</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><img src="images/corr2.png" class="img-fluid"></p>
+</section>
+<section id="references" class="level3">
+<h3 class="anchored" data-anchor-id="references">References:</h3>
+<ol type="1">
+<li><p>TEKRABber on Bioconductor: <a href="https://bioconductor.org/packages/release/bioc/html/TEKRABber.html">Link</a></p></li>
+<li><p>Source code on Github: <a href="https://github.com/ferygood/TEKRABber">Link</a></p></li>
+</ol>
+
 
 
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-khrameeva2020" class="csl-entry" role="doc-biblioentry">
+Khrameeva, Ekaterina, Ilia Kurochkin, Dingding Han, Patricia Guijarro, Sabina Kanton, Malgorzata Santel, Zhengzong Qian, et al. 2020. <span>“Single-cell-resolution transcriptome map of human, chimpanzee, bonobo, and macaque brains.”</span> <em>Genome Research</em> 30 (5): 776–89. <a href="https://doi.org/10.1101/gr.256958.119">https://doi.org/10.1101/gr.256958.119</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

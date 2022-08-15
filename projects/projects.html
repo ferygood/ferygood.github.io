@@ -70,7 +70,7 @@ ul.task-list{list-style: none;}
     const options = {
       valueNames: ['listing-image','listing-date','listing-title','listing-subtitle','listing-categories','listing-author','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -170,7 +170,7 @@ ga('send', {
   <li><a href="#projects" id="toc-projects" class="nav-link active" data-scroll-target="#projects">Projects</a></li>
   </ul>
 </nav>
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-cloud"></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-cloud"><div class="category" data-category="Bioconductor"><span class="quarto-category-count category-cloud-10">Bioconductor</span></div><div class="category" data-category="R"><span class="quarto-category-count category-cloud-10">R</span></div><div class="category" data-category="correlation"><span class="quarto-category-count category-cloud-10">correlation</span></div><div class="category" data-category="software"><span class="quarto-category-count category-cloud-10">software</span></div><div class="category" data-category="transposable elements"><span class="quarto-category-count category-cloud-10">transposable elements</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
@@ -205,13 +205,9 @@ ga('send', {
     </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1660423339062" data-listing-reading-time-sort="0.045">
+<div class="quarto-post image-right" data-index="0" data-categories="Bioconductor,R,software,transposable elements,correlation" data-listing-date-sort="1660514400000" data-listing-file-modified-sort="1660595158104" data-listing-reading-time-sort="6.23">
 <div class="thumbnail">
-<a href="../projects/TEKRABber/index.html">
-<div class="thumbnail-image">
-
-</div>
-</a><p><a href="../projects/TEKRABber/index.html"></a></p>
+<p><a href="../projects/TEKRABber/index.html"> <img src="../projects/TEKRABber/images/de.png" class="thumnail-image"> </a></p>
 </div>
 <div class="body">
 <a href="../projects/TEKRABber/index.html">
@@ -222,11 +218,35 @@ TEKRABber
 
 </div>
 </a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Bioconductor'); return false;">
+Bioconductor
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
+R
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('software'); return false;">
+software
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('transposable elements'); return false;">
+transposable elements
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('correlation'); return false;">
+correlation
+</div>
+</div>
+<a href="../projects/TEKRABber/index.html"> </a>
 </div>
 <div class="metadata">
 <a href="../projects/TEKRABber/index.html">
+<div class="listing-date">
+Aug 15, 2022
+</div>
+<div class="listing-author">
+Yao-Chung Chen
+</div>
 <div class="listing-reading-time">
-0 min
+6 min
 </div>
 </a>
 </div>
