@@ -1,3 +1,240 @@
-# TEKRABber
+---
+title: "TEKRABber"
+author: "Yao-Chung Chen"
+date: "2022-08-15"
+categories: [Bioconductor, R, software, transposable elements, correlation]
+bibliography: references.bib
+---
 
-TEKRABber is a Bioconductor package published early this year.
+### Introduction
+
+[TEKRABber](https://bioconductor.org/packages/release/bioc/html/TEKRABber.html) is a Bioconductor package I published early this year. It is made to provide a user-friendly pipeline for **comparing orthologs and transposable elements (TEs) between two species.** It considers the orthology confidence between two species from BioMart to normalize expression counts and detect differentially expressed orthologs/TEs. Then it provides one to one correlation analysis for desired orthologs and TEs. There is also an app function to have a first insight on the result. Users can prepare orthologs/TEs RNA-seq expression data by their own preference to run [TEKRABber](https://bioconductor.org/packages/release/bioc/html/TEKRABber.html) following the data structure mentioned in the following demo.
+
+Although [TEKRABber](https://bioconductor.org/packages/release/bioc/html/TEKRABber.html) is developed to compare between species, you can still use it for experiment which compare control and treatment in the same species. If you are more interest in this, you may directly jump to the second half of this article.
+
+### Installation
+
+For a stable version, I recommend download [TEKRABber](https://bioconductor.org/packages/release/bioc/html/TEKRABber.html) from Bioconductor archive.
+
+```{r message=FALSE, warning=FALSE, eval=FALSE}
+install.packages("BiocManager")
+BiocManager::install("TEKRABber")
+```
+
+```{r message=FALSE, warning=FALSE}
+library(TEKRABber)
+library(SummarizedExperiment) # load it if you are following this tutorial
+```
+
+### 1. Comparing between two species
+
+In the first example, we randomly generated/picked gene and transposable elements (TE) expression data from 10 humans and 10 chimpanzees [@khrameeva2020]. The values for the first column of gene and TE count table must be **Ensembl gene ID** and **TE name**:
+
+```{r}
+# load built-in data
+data(speciesCounts)
+hmGene <- speciesCounts$hmGene
+hmTE <- speciesCounts$hmTE
+chimpGene <- speciesCounts$chimpGene
+chimpTE <- speciesCounts$chimpTE
+# the first column must be Ensembl gene ID for gene, and TE name for TE
+head(hmGene)
+```
+
+### 1.1 Query ortholog information and estimate scaling factor
+
+In the first step, we use `orthologScale()` to get orthology information and calculate the scaling factor between two species. The species name needs to be the abbreviation of scientific species name used in Ensembl. (Note: (1)This step queries information using [*biomaRt*](https://bioconductor.org/packages/3.15/biomaRt) and it might need some time or try different mirrors due to the connections to Ensembl (2)It might take some time to calculate scaling factor based on your data size).
+
+```{r}
+# You can use the code below to search for species name
+ensembl <- biomaRt::useEnsembl(biomart = "genes")
+head(biomaRt::listDatasets(ensembl))
+
+```
+
+```{r}
+# In order to save time, we have save the data for this tutorial.
+data(fetchDataHmChimp)
+fetchData <- fetchDataHmChimp
+
+# Query the data and calculate scaling factor using orthologScale():
+# fetchData <- orthologScale(
+#     geneCountRef = hmGene,
+#     geneCountCompare = chimpGene,
+#     speciesRef = "hsapiens",
+#     speciesCompare = "ptroglodytes"
+# )
+```
+
+### 1.2 Create inputs for differentially expressed analysis and correlation estimation
+
+We use `DECorrInputs()` to return inputs files for downstream analysis.
+
+```{r}
+inputBundle <- DECorrInputs(
+    orthologTable = fetchData$orthologTable,
+    scaleFactor = fetchData$scaleFactor,
+    geneCountRef = hmGene,
+    geneCountCompare = chimpGene,
+    teCountRef = hmTE,
+    teCountCompare = chimpTE
+)
+```
+
+### 1.3 Differentially expressed analysis (DE analysis)
+
+In this step, we need to generate a metadata contain species name (i.e., human and chimpanzee). The row names need to be same as the DE input table and the column name must be **species** (see the example below). Then we use `DEgeneTE()` to perform DE analysis. When you are comparing samples between two species, the parameter **expDesign** should be **TRUE** (as default).
+
+```{r message=FALSE}
+meta <- data.frame(
+    species = c(rep("human", ncol(hmGene) - 1), 
+    rep("chimpanzee", ncol(chimpGene) - 1))
+)
+
+meta$species <- factor(meta$species, levels = c("human", "chimpanzee"))
+rownames(meta) <- colnames(inputBundle$geneInputDESeq2)
+hmchimpDE <- DEgeneTE(
+    geneTable = inputBundle$geneInputDESeq2,
+    teTable = inputBundle$teInputDESeq2,
+    metadata = meta,
+    expDesign = TRUE
+)
+```
+
+### 1.4 Correlation analysis
+
+Here we use `corrOrthologTE()` to perform correlation estimation comparing each ortholog and TE. This is the most time-consuming step if you have large data. For a quick demonstration, we use a relatively small data. You can specify the correlation method and adjusted *p-value* method. The default methods are Pearson's correlation and FDR. **Note:** For more efficient and specific analysis, you can subset your data in this step to focus on only the orthologs and TEs that you are interested in.
+
+```{r warning=FALSE}
+# load built-in data
+data(speciesCorr)
+hmGeneCorrInput <- assay_tekcorrset(speciesCorr, "gene", "human")
+hmTECorrInput <- assay_tekcorrset(speciesCorr, "te", "human")
+chimpGeneCorrInput <- assay_tekcorrset(speciesCorr, "gene", "chimpanzee")
+chimpTECorrInput <- assay_tekcorrset(speciesCorr, "te", "chimpanzee")
+
+hmCorrResult <- corrOrthologTE(
+    geneInput = hmGeneCorrInput,
+    teInput = hmTECorrInput,
+    corrMethod = "pearson",
+    padjMethod = "fdr"
+)
+
+chimpCorrResult <- corrOrthologTE(
+    geneInput = chimpGeneCorrInput,
+    teInput = chimpTECorrInput,
+    corrMethod = "pearson",
+    padjMethod = "fdr"
+)
+
+head(hmCorrResult)
+```
+
+### 1.5 Explore your result using `appTEKRABber()`:
+
+[TEKRABber](https://bioconductor.org/packages/3.15/TEKRABber) provides an app function for you to quickly view your result. First, you will need to assign the differentially expressed orthologs/TEs results, correlation results and metadata as global variables: `appDE`, `appRef`, `appCompare` and `appMeta`. See the following example.
+
+```{r eval=FALSE}
+#create global variables for app-use
+appDE <- hmchimpDE
+appRef <- hmCorrResult
+appCompare <- chimpCorrResult
+appMeta <- meta # this is the same one in DE analysis
+
+appTEKRABber()
+```
+
+![](images/de.png)
+
+The **Expression tab** show selected genes and TEs in boxplot. It also provide DE information and correlation statistics.
+
+![](images/corr.png)
+
+In the **Correlation tab** page (above figure), you can select your data in scatter plots in three ways. **(1)** Specify the data point and it will turn red in the distribution of your results **(2)** Show the distribution of all the data from your correlation results based on their correlation coefficients and adjusted *p-value*. The blue vertical dashed line indicates the boundary of adjusted *p-value* is 0.05, and the orange one is for adjusted *p-value* 0.01 **(3)** you can click the data points which you are interested in, and it will be listed in the table. You can also drag a certain area to show data points in it.
+
+### 2. Comparing control and treatment samples within the same species
+
+If you want to compare selected genes and TEs **(1)** from different tissue in same species or **(2)** control and drug treatment in same tissue in same species, please generate all the input files following the input format. Here we show an example data of prepared input files including expression counts from 10 control and 10 treatment samples. The format of input data: row names should be gene name or id, and column name is your sample id (please see details below).
+
+```{r}
+# load built-in data
+data(ctInputDE)
+geneInputDE <- ctInputDE$gene
+teInputDE <- ctInputDE$te
+
+# you need to follow the input format as below
+head(geneInputDE)
+```
+
+### 2.1 DE analysis
+
+For DE analysis in the same species, you also use `DEgeneTE()` function, however, you need to set the parameter **expDesign** to **FALSE**. You also need to provide a metadata which this time the column name must be **experiment**. See demonstration below:
+
+```{r message=FALSE}
+metaExp <- data.frame(experiment = c(rep("control", 5), rep("treatment", 5)))
+rownames(metaExp) <- colnames(geneInputDE)
+metaExp$experiment <- factor(
+    metaExp$experiment, 
+    levels = c("control", "treatment")
+)
+
+resultDE <- DEgeneTE(
+    geneTable = geneInputDE,
+    teTable = teInputDE,
+    metadata = metaExp,
+    expDesign = FALSE
+)
+```
+
+### 2.2 Correlation analysis
+
+For a quick demonstration to perform correlation of genes and TEs in control and treatment sample, we use relatively small input tables which only include 10 genes and 10 TEs.
+
+```{r}
+# load built-in data
+data(ctCorr)
+geneConCorrInput <- assay_tekcorrset(ctCorr, "gene", "control")
+teConCorrInput <- assay_tekcorrset(ctCorr, "te", "control")
+geneTreatCorrInput <- assay_tekcorrset(ctCorr, "gene", "treatment")
+teTreatCorrInput <- assay_tekcorrset(ctCorr, "te", "treatment")
+
+# you need to follow the input format as below
+head(geneConCorrInput)
+```
+
+```{r}
+controlCorr <- corrOrthologTE(
+    geneInput = geneConCorrInput,
+    teInput = teConCorrInput,
+    corrMethod = "pearson",
+    padjMethod = "fdr"
+)
+
+treatmentCorr <- corrOrthologTE(
+    geneInput = geneTreatCorrInput,
+    teInput = teTreatCorrInput,
+    corrMethod = "pearson",
+    padjMethod = "fdr"
+)
+
+head(treatmentCorr)
+```
+
+### 2.3 Explore your result using `appTEKRABber()`:
+
+```{r eval=FALSE}
+appDE <- resultDE
+appRef <- controlCorr
+appCompare <- treatmentCorr
+appMeta <- metaExp
+
+appTEKRABber()
+```
+
+![](images/corr2.png)
+
+### References:
+
+1.  TEKRABber on Bioconductor: [Link](https://bioconductor.org/packages/release/bioc/html/TEKRABber.html)
+
+2.  Source code on Github: [Link](https://github.com/ferygood/TEKRABber)
