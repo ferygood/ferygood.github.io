@@ -61,7 +61,7 @@ ul.task-list{list-style: none;}
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-my-projects .list');
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -70,11 +70,11 @@ ul.task-list{list-style: none;}
     const options = {
       valueNames: ['listing-image','listing-date','listing-title','listing-subtitle','listing-categories','listing-author','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-my-projects'] = new List('listing-my-projects', options);
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -126,10 +126,10 @@ ga('send', {
     <a class="nav-link" href="../about.html">About</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../posts/posts.html">Posts</a>
+    <a class="nav-link active" href="../projects/projects.html" aria-current="page">Portfolio</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../projects/projects.html" aria-current="page">Projects</a>
+    <a class="nav-link" href="../posts/posts.html">Posts</a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="https://ferygood.github.io/resume/">Resume</a>
@@ -162,27 +162,27 @@ ga('send', {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#projects" id="toc-projects" class="nav-link active" data-scroll-target="#projects">Projects</a></li>
-  </ul>
-</nav>
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-cloud"><div class="category" data-category="Bioconductor"><span class="quarto-category-count category-cloud-10">Bioconductor</span></div><div class="category" data-category="R"><span class="quarto-category-count category-cloud-10">R</span></div><div class="category" data-category="correlation"><span class="quarto-category-count category-cloud-10">correlation</span></div><div class="category" data-category="software"><span class="quarto-category-count category-cloud-10">software</span></div><div class="category" data-category="transposable elements"><span class="quarto-category-count category-cloud-10">transposable elements</span></div></div></div>
+    
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 
 
 <section id="projects" class="level2">
 <h2 class="anchored" data-anchor-id="projects">Projects</h2>
-<div id="listing-my-projects" class="quarto-listing quarto-listing-container-default">
+<div id="my-projects">
+
+</div>
+
+
+
+</section>
+
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="listing-actions-group">
    <div class="input-group input-group-sm quarto-listing-sort">
      <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-my-projects-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-my-projects'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
        <option value="" disabled="" selected="" hidden="">Order By</option>
        <option value="index" data-direction="asc">Default</option>
          <option value="listing-title" data-direction="asc">
@@ -204,20 +204,20 @@ ga('send', {
       <input type="text" class="search form-control" placeholder="Filter">
     </div>
 </div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Bioconductor,R,software,transposable elements,correlation" data-listing-date-sort="1660514400000" data-listing-file-modified-sort="1660595158104" data-listing-reading-time-sort="6.23">
-<div class="thumbnail">
-<p><a href="../projects/TEKRABber/index.html"> <img src="../projects/TEKRABber/images/de.png" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../projects/TEKRABber/index.html">
-<h3 class="no-anchor listing-title">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="Bioconductor,R,software,transposable elements,correlation" data-listing-date-sort="1660514400000" data-listing-file-modified-sort="1660631902789" data-listing-reading-time-sort="6.165">
+<a href="../projects/TEKRABber/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="../projects/TEKRABber/images/de.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 TEKRABber
-</h3>
-<div class="listing-subtitle">
-
+</h5>
+<div class="listing-reading-time card-text text-muted">
+6 min
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Bioconductor'); return false;">
 Bioconductor
@@ -235,33 +235,23 @@ transposable elements
 correlation
 </div>
 </div>
-<a href="../projects/TEKRABber/index.html"> </a>
-</div>
-<div class="metadata">
-<a href="../projects/TEKRABber/index.html">
-<div class="listing-date">
-Aug 15, 2022
-</div>
+<div class="card-attribution card-text-small justify">
 <div class="listing-author">
 Yao-Chung Chen
 </div>
-<div class="listing-reading-time">
-6 min
+<div class="listing-date">
+Aug 15, 2022
+</div>
+</div>
+</div>
 </div>
 </a>
-</div>
 </div>
 </div>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
-</div>
-
-
-
-</section>
-
-</main> <!-- /main -->
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

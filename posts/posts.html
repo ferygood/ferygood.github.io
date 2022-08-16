@@ -70,7 +70,7 @@ ul.task-list{list-style: none;}
     const options = {
       valueNames: ['listing-image','listing-date','listing-title','listing-subtitle','listing-categories','listing-author','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -126,10 +126,10 @@ ga('send', {
     <a class="nav-link" href="../about.html">About</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../posts/posts.html" aria-current="page">Posts</a>
+    <a class="nav-link" href="../projects/projects.html">Portfolio</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../projects/projects.html">Projects</a>
+    <a class="nav-link active" href="../posts/posts.html" aria-current="page">Posts</a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="https://ferygood.github.io/resume/">Resume</a>
@@ -178,7 +178,7 @@ ga('send', {
 
 </section>
 
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="listing-actions-group">
    <div class="input-group input-group-sm quarto-listing-sort">
      <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
@@ -204,20 +204,20 @@ ga('send', {
       <input type="text" class="search form-control" placeholder="Filter">
     </div>
 </div>
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="nextflow,learning" data-listing-date-sort="1660428000000" data-listing-file-modified-sort="1660494886257" data-listing-reading-time-sort="0.08">
-<a href="../posts/nextflow-tutorial/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="https://repository-images.githubusercontent.com/9052236/8264fe00-6bff-11e9-991d-58e54505afa8" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Nextflow tutorial
-</h5>
-<div class="listing-reading-time card-text text-muted">
-0 min
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="nextflow,learning" data-listing-date-sort="1660428000000" data-listing-file-modified-sort="1660633989421" data-listing-reading-time-sort="0.08">
+<div class="thumbnail">
+<p><a href="../posts/nextflow-tutorial/index.html"> <img src="https://telatin.github.io/microbiome-bioinformatics/assets/images/nextflow.jpg" class="thumnail-image"> </a></p>
 </div>
+<div class="body">
+<a href="../posts/nextflow-tutorial/index.html">
+<h3 class="no-anchor listing-title">
+Nextflow tutorial
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('nextflow'); return false;">
 nextflow
@@ -226,34 +226,35 @@ nextflow
 learning
 </div>
 </div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Yao-Chung Chen
+<a href="../posts/nextflow-tutorial/index.html"> </a>
 </div>
+<div class="metadata">
+<a href="../posts/nextflow-tutorial/index.html">
 <div class="listing-date">
 Aug 14, 2022
 </div>
+<div class="listing-author">
+Yao-Chung Chen
 </div>
-</div>
+<div class="listing-reading-time">
+0 min
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="news,code,analysis" data-listing-date-sort="1660168800000" data-listing-file-modified-sort="1660425122937" data-listing-reading-time-sort="0.035">
-<a href="../posts/post-with-code/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="../posts/post-with-code/image.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="news,code,analysis" data-listing-date-sort="1660168800000" data-listing-file-modified-sort="1660559246207" data-listing-reading-time-sort="0.035">
+<div class="thumbnail">
+<p><a href="../posts/post-with-code/index.html"> <img src="../posts/post-with-code/image.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../posts/post-with-code/index.html">
+<h3 class="no-anchor listing-title">
 Post With Code
-</h5>
-<div class="card-subtitle listing-subtitle">
+</h3>
+<div class="listing-subtitle">
 this is the subtitle for post with code
 </div>
-<div class="listing-reading-time card-text text-muted">
-0 min
-</div>
+</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
 news
@@ -265,47 +266,55 @@ code
 analysis
 </div>
 </div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Harlow Malloc
+<a href="../posts/post-with-code/index.html"> </a>
 </div>
+<div class="metadata">
+<a href="../posts/post-with-code/index.html">
 <div class="listing-date">
 Aug 11, 2022
 </div>
+<div class="listing-author">
+Harlow Malloc
 </div>
-</div>
+<div class="listing-reading-time">
+0 min
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="news" data-listing-date-sort="1659909600000" data-listing-file-modified-sort="1660185527281" data-listing-reading-time-sort="0.16">
-<a href="../posts/welcome/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="../posts/welcome/thumbnail.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Welcome To My Blog
-</h5>
-<div class="listing-reading-time card-text text-muted">
-0 min
 </div>
+<div class="quarto-post image-right" data-index="2" data-categories="news" data-listing-date-sort="1659909600000" data-listing-file-modified-sort="1660559246207" data-listing-reading-time-sort="0.16">
+<div class="thumbnail">
+<p><a href="../posts/welcome/index.html"> <img src="../posts/welcome/thumbnail.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../posts/welcome/index.html">
+<h3 class="no-anchor listing-title">
+Welcome To My Blog
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
 news
 </div>
 </div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Tristan O’Malley
+<a href="../posts/welcome/index.html"> </a>
 </div>
+<div class="metadata">
+<a href="../posts/welcome/index.html">
 <div class="listing-date">
 Aug 8, 2022
 </div>
+<div class="listing-author">
+Tristan O’Malley
 </div>
-</div>
+<div class="listing-reading-time">
+0 min
 </div>
 </a>
+</div>
 </div>
 </div>
 <div class="listing-no-matching d-none">
