@@ -41,7 +41,7 @@ chimpTE <- speciesCounts$chimpTE
 head(hmGene)
 ```
 
-### 1.1 Query ortholog information and estimate scaling factor
+### 1.1 Ortholog information and normalization
 
 In the first step, we use `orthologScale()` to get orthology information and calculate the scaling factor between two species. The species name needs to be the abbreviation of scientific species name used in Ensembl. (Note: (1)This step queries information using [*biomaRt*](https://bioconductor.org/packages/3.15/biomaRt) and it might need some time or try different mirrors due to the connections to Ensembl (2)It might take some time to calculate scaling factor based on your data size).
 
@@ -66,7 +66,7 @@ fetchData <- fetchDataHmChimp
 # )
 ```
 
-### 1.2 Create inputs for differentially expressed analysis and correlation estimation
+### 1.2 Inputs for differentially expressed (DE) and correlation analysis
 
 We use `DECorrInputs()` to return inputs files for downstream analysis.
 
@@ -81,7 +81,7 @@ inputBundle <- DECorrInputs(
 )
 ```
 
-### 1.3 Differentially expressed analysis (DE analysis)
+### 1.3 DE analysis
 
 In this step, we need to generate a metadata contain species name (i.e., human and chimpanzee). The row names need to be same as the DE input table and the column name must be **species** (see the example below). Then we use `DEgeneTE()` to perform DE analysis. When you are comparing samples between two species, the parameter **expDesign** should be **TRUE** (as default).
 
@@ -130,7 +130,7 @@ chimpCorrResult <- corrOrthologTE(
 head(hmCorrResult)
 ```
 
-### 1.5 Explore your result using `appTEKRABber()`:
+### 1.5 Explore results `appTEKRABber()`
 
 [TEKRABber](https://bioconductor.org/packages/3.15/TEKRABber) provides an app function for you to quickly view your result. First, you will need to assign the differentially expressed orthologs/TEs results, correlation results and metadata as global variables: `appDE`, `appRef`, `appCompare` and `appMeta`. See the following example.
 
@@ -152,7 +152,7 @@ The **Expression tab** show selected genes and TEs in boxplot. It also provide D
 
 In the **Correlation tab** page (above figure), you can select your data in scatter plots in three ways. **(1)** Specify the data point and it will turn red in the distribution of your results **(2)** Show the distribution of all the data from your correlation results based on their correlation coefficients and adjusted *p-value*. The blue vertical dashed line indicates the boundary of adjusted *p-value* is 0.05, and the orange one is for adjusted *p-value* 0.01 **(3)** you can click the data points which you are interested in, and it will be listed in the table. You can also drag a certain area to show data points in it.
 
-### 2. Comparing control and treatment samples within the same species
+### 2. Comparing control and treatment in same species
 
 If you want to compare selected genes and TEs **(1)** from different tissue in same species or **(2)** control and drug treatment in same tissue in same species, please generate all the input files following the input format. Here we show an example data of prepared input files including expression counts from 10 control and 10 treatment samples. The format of input data: row names should be gene name or id, and column name is your sample id (please see details below).
 
@@ -220,7 +220,7 @@ treatmentCorr <- corrOrthologTE(
 head(treatmentCorr)
 ```
 
-### 2.3 Explore your result using `appTEKRABber()`:
+### 2.3 Explore results `appTEKRABber()`
 
 ```{r eval=FALSE}
 appDE <- resultDE
@@ -233,7 +233,7 @@ appTEKRABber()
 
 ![](images/corr2.png)
 
-### References:
+### References
 
 1.  TEKRABber on Bioconductor: [Link](https://bioconductor.org/packages/release/bioc/html/TEKRABber.html)
 

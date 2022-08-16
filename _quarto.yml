@@ -11,13 +11,12 @@ website:
     logo: img/brain.png
     right:
       - about.qmd
+      - text: Portfolio
+        href: projects/projects.qmd
       - text: Posts
         href: posts/posts.qmd
-      - text: Projects
-        href: projects/projects.qmd
       - text: Resume
         href: https://ferygood.github.io/resume/
-        
       - icon: github
         href: https://github.com/ferygood
       - icon: linkedin
@@ -29,7 +28,7 @@ format:
   html:
     theme: 
       light: flatly
-      dark: darkly
+      dark: [darkly, theme-dark.scss]
     css: styles.css
     toc: true
 
