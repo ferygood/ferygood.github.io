@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://ferygood.github.io/posts/post-with-code/index.html</loc>
+    <lastmod>2022-08-18T08:49:19.980Z</lastmod>
+  </url>
+  <url>
     <loc>https://ferygood.github.io/posts/welcome/index.html</loc>
-    <lastmod>2022-08-16T07:15:11.370Z</lastmod>
+    <lastmod>2022-08-18T08:49:21.037Z</lastmod>
   </url>
   <url>
     <loc>https://ferygood.github.io/posts/nextflow-tutorial/index.html</loc>
-    <lastmod>2022-08-16T07:15:12.046Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ferygood.github.io/posts/post-with-code/index.html</loc>
-    <lastmod>2022-08-16T07:15:12.314Z</lastmod>
+    <lastmod>2022-08-18T08:49:22.006Z</lastmod>
   </url>
   <url>
     <loc>https://ferygood.github.io/projects/TEKRABber/index.html</loc>
-    <lastmod>2022-08-16T07:16:03.178Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ferygood.github.io/about.html</loc>
-    <lastmod>2022-08-16T07:16:03.690Z</lastmod>
+    <lastmod>2022-08-18T08:50:29.779Z</lastmod>
   </url>
   <url>
     <loc>https://ferygood.github.io/index.html</loc>
-    <lastmod>2022-08-16T07:16:04.006Z</lastmod>
+    <lastmod>2022-08-18T08:50:30.500Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ferygood.github.io/about.html</loc>
+    <lastmod>2022-08-18T08:50:31.633Z</lastmod>
   </url>
 </urlset>

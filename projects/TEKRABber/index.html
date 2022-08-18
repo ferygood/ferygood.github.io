@@ -140,19 +140,14 @@ div.csl-indent {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-H0GJETSLQM"></script>
 
 <script type="text/javascript">
 
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-181333208-1', 'auto');
-
-ga('send', {
-  hitType: 'pageview',
-  'anonymizeIp': true,
-});
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-H0GJETSLQM', { 'anonymize_ip': true});
 </script>
 
 
@@ -178,10 +173,10 @@ ga('send', {
     <a class="nav-link" href="../../about.html">About</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../projects/projects.html">Portfolio</a>
+    <a class="nav-link" href="../../posts/posts.html">Posts</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../posts/posts.html">Posts</a>
+    <a class="nav-link" href="../../projects/projects.html">Projects</a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="https://ferygood.github.io/resume/">Resume</a>
@@ -222,16 +217,16 @@ ga('send', {
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">Installation</a></li>
   <li><a href="#comparing-between-two-species" id="toc-comparing-between-two-species" class="nav-link" data-scroll-target="#comparing-between-two-species">1. Comparing between two species</a></li>
-  <li><a href="#ortholog-information-and-normalization" id="toc-ortholog-information-and-normalization" class="nav-link" data-scroll-target="#ortholog-information-and-normalization">1.1 Ortholog information and normalization</a></li>
-  <li><a href="#inputs-for-differentially-expressed-de-and-correlation-analysis" id="toc-inputs-for-differentially-expressed-de-and-correlation-analysis" class="nav-link" data-scroll-target="#inputs-for-differentially-expressed-de-and-correlation-analysis">1.2 Inputs for differentially expressed (DE) and correlation analysis</a></li>
-  <li><a href="#de-analysis" id="toc-de-analysis" class="nav-link" data-scroll-target="#de-analysis">1.3 DE analysis</a></li>
+  <li><a href="#query-ortholog-information-and-estimate-scaling-factor" id="toc-query-ortholog-information-and-estimate-scaling-factor" class="nav-link" data-scroll-target="#query-ortholog-information-and-estimate-scaling-factor">1.1 Query ortholog information and estimate scaling factor</a></li>
+  <li><a href="#create-inputs-for-differentially-expressed-analysis-and-correlation-estimation" id="toc-create-inputs-for-differentially-expressed-analysis-and-correlation-estimation" class="nav-link" data-scroll-target="#create-inputs-for-differentially-expressed-analysis-and-correlation-estimation">1.2 Create inputs for differentially expressed analysis and correlation estimation</a></li>
+  <li><a href="#differentially-expressed-analysis-de-analysis" id="toc-differentially-expressed-analysis-de-analysis" class="nav-link" data-scroll-target="#differentially-expressed-analysis-de-analysis">1.3 Differentially expressed analysis (DE analysis)</a></li>
   <li><a href="#correlation-analysis" id="toc-correlation-analysis" class="nav-link" data-scroll-target="#correlation-analysis">1.4 Correlation analysis</a></li>
-  <li><a href="#explore-results-apptekrabber" id="toc-explore-results-apptekrabber" class="nav-link" data-scroll-target="#explore-results-apptekrabber">1.5 Explore results <code>appTEKRABber()</code></a></li>
-  <li><a href="#comparing-control-and-treatment-in-same-species" id="toc-comparing-control-and-treatment-in-same-species" class="nav-link" data-scroll-target="#comparing-control-and-treatment-in-same-species">2. Comparing control and treatment in same species</a></li>
-  <li><a href="#de-analysis-1" id="toc-de-analysis-1" class="nav-link" data-scroll-target="#de-analysis-1">2.1 DE analysis</a></li>
+  <li><a href="#explore-your-result-using-apptekrabber" id="toc-explore-your-result-using-apptekrabber" class="nav-link" data-scroll-target="#explore-your-result-using-apptekrabber">1.5 Explore your result using <code>appTEKRABber()</code>:</a></li>
+  <li><a href="#comparing-control-and-treatment-samples-within-the-same-species" id="toc-comparing-control-and-treatment-samples-within-the-same-species" class="nav-link" data-scroll-target="#comparing-control-and-treatment-samples-within-the-same-species">2. Comparing control and treatment samples within the same species</a></li>
+  <li><a href="#de-analysis" id="toc-de-analysis" class="nav-link" data-scroll-target="#de-analysis">2.1 DE analysis</a></li>
   <li><a href="#correlation-analysis-1" id="toc-correlation-analysis-1" class="nav-link" data-scroll-target="#correlation-analysis-1">2.2 Correlation analysis</a></li>
-  <li><a href="#explore-results-apptekrabber-1" id="toc-explore-results-apptekrabber-1" class="nav-link" data-scroll-target="#explore-results-apptekrabber-1">2.3 Explore results <code>appTEKRABber()</code></a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#explore-your-result-using-apptekrabber-1" id="toc-explore-your-result-using-apptekrabber-1" class="nav-link" data-scroll-target="#explore-your-result-using-apptekrabber-1">2.3 Explore your result using <code>appTEKRABber()</code>:</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References:</a></li>
   </ul>
 </nav>
     </div>
@@ -320,8 +315,8 @@ ga('send', {
 </div>
 </div>
 </section>
-<section id="ortholog-information-and-normalization" class="level3">
-<h3 class="anchored" data-anchor-id="ortholog-information-and-normalization">1.1 Ortholog information and normalization</h3>
+<section id="query-ortholog-information-and-estimate-scaling-factor" class="level3">
+<h3 class="anchored" data-anchor-id="query-ortholog-information-and-estimate-scaling-factor">1.1 Query ortholog information and estimate scaling factor</h3>
 <p>In the first step, we use <code>orthologScale()</code> to get orthology information and calculate the scaling factor between two species. The species name needs to be the abbreviation of scientific species name used in Ensembl. (Note: (1)This step queries information using <a href="https://bioconductor.org/packages/3.15/biomaRt"><em>biomaRt</em></a> and it might need some time or try different mirrors due to the connections to Ensembl (2)It might take some time to calculate scaling factor based on your data size).</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># You can use the code below to search for species name</span></span>
@@ -358,8 +353,8 @@ ga('send', {
 <span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="co"># )</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="inputs-for-differentially-expressed-de-and-correlation-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="inputs-for-differentially-expressed-de-and-correlation-analysis">1.2 Inputs for differentially expressed (DE) and correlation analysis</h3>
+<section id="create-inputs-for-differentially-expressed-analysis-and-correlation-estimation" class="level3">
+<h3 class="anchored" data-anchor-id="create-inputs-for-differentially-expressed-analysis-and-correlation-estimation">1.2 Create inputs for differentially expressed analysis and correlation estimation</h3>
 <p>We use <code>DECorrInputs()</code> to return inputs files for downstream analysis.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>inputBundle <span class="ot">&lt;-</span> <span class="fu">DECorrInputs</span>(</span>
@@ -372,8 +367,8 @@ ga('send', {
 <span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="de-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="de-analysis">1.3 DE analysis</h3>
+<section id="differentially-expressed-analysis-de-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="differentially-expressed-analysis-de-analysis">1.3 Differentially expressed analysis (DE analysis)</h3>
 <p>In this step, we need to generate a metadata contain species name (i.e., human and chimpanzee). The row names need to be same as the DE input table and the column name must be <strong>species</strong> (see the example below). Then we use <code>DEgeneTE()</code> to perform DE analysis. When you are comparing samples between two species, the parameter <strong>expDesign</strong> should be <strong>TRUE</strong> (as default).</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>meta <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
@@ -428,8 +423,8 @@ ga('send', {
 </div>
 </div>
 </section>
-<section id="explore-results-apptekrabber" class="level3">
-<h3 class="anchored" data-anchor-id="explore-results-apptekrabber">1.5 Explore results <code>appTEKRABber()</code></h3>
+<section id="explore-your-result-using-apptekrabber" class="level3">
+<h3 class="anchored" data-anchor-id="explore-your-result-using-apptekrabber">1.5 Explore your result using <code>appTEKRABber()</code>:</h3>
 <p><a href="https://bioconductor.org/packages/3.15/TEKRABber">TEKRABber</a> provides an app function for you to quickly view your result. First, you will need to assign the differentially expressed orthologs/TEs results, correlation results and metadata as global variables: <code>appDE</code>, <code>appRef</code>, <code>appCompare</code> and <code>appMeta</code>. See the following example.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">#create global variables for app-use</span></span>
@@ -445,8 +440,8 @@ ga('send', {
 <p><img src="images/corr.png" class="img-fluid"></p>
 <p>In the <strong>Correlation tab</strong> page (above figure), you can select your data in scatter plots in three ways. <strong>(1)</strong> Specify the data point and it will turn red in the distribution of your results <strong>(2)</strong> Show the distribution of all the data from your correlation results based on their correlation coefficients and adjusted <em>p-value</em>. The blue vertical dashed line indicates the boundary of adjusted <em>p-value</em> is 0.05, and the orange one is for adjusted <em>p-value</em> 0.01 <strong>(3)</strong> you can click the data points which you are interested in, and it will be listed in the table. You can also drag a certain area to show data points in it.</p>
 </section>
-<section id="comparing-control-and-treatment-in-same-species" class="level3">
-<h3 class="anchored" data-anchor-id="comparing-control-and-treatment-in-same-species">2. Comparing control and treatment in same species</h3>
+<section id="comparing-control-and-treatment-samples-within-the-same-species" class="level3">
+<h3 class="anchored" data-anchor-id="comparing-control-and-treatment-samples-within-the-same-species">2. Comparing control and treatment samples within the same species</h3>
 <p>If you want to compare selected genes and TEs <strong>(1)</strong> from different tissue in same species or <strong>(2)</strong> control and drug treatment in same tissue in same species, please generate all the input files following the input format. Here we show an example data of prepared input files including expression counts from 10 control and 10 treatment samples. The format of input data: row names should be gene name or id, and column name is your sample id (please see details below).</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load built-in data</span></span>
@@ -474,8 +469,8 @@ ENSG00000223953        1143        1500         498          864</code></pre>
 </div>
 </div>
 </section>
-<section id="de-analysis-1" class="level3">
-<h3 class="anchored" data-anchor-id="de-analysis-1">2.1 DE analysis</h3>
+<section id="de-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="de-analysis">2.1 DE analysis</h3>
 <p>For DE analysis in the same species, you also use <code>DEgeneTE()</code> function, however, you need to set the parameter <strong>expDesign</strong> to <strong>FALSE</strong>. You also need to provide a metadata which this time the column name must be <strong>experiment</strong>. See demonstration below:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>metaExp <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">experiment =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"control"</span>, <span class="dv">5</span>), <span class="fu">rep</span>(<span class="st">"treatment"</span>, <span class="dv">5</span>)))</span>
@@ -543,8 +538,8 @@ ENSG00000223953       259       830       133       258       850</code></pre>
 </div>
 </div>
 </section>
-<section id="explore-results-apptekrabber-1" class="level3">
-<h3 class="anchored" data-anchor-id="explore-results-apptekrabber-1">2.3 Explore results <code>appTEKRABber()</code></h3>
+<section id="explore-your-result-using-apptekrabber-1" class="level3">
+<h3 class="anchored" data-anchor-id="explore-your-result-using-apptekrabber-1">2.3 Explore your result using <code>appTEKRABber()</code>:</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>appDE <span class="ot">&lt;-</span> resultDE</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>appRef <span class="ot">&lt;-</span> controlCorr</span>
@@ -556,7 +551,7 @@ ENSG00000223953       259       830       133       258       850</code></pre>
 <p><img src="images/corr2.png" class="img-fluid"></p>
 </section>
 <section id="references" class="level3">
-<h3 class="anchored" data-anchor-id="references">References</h3>
+<h3 class="anchored" data-anchor-id="references">References:</h3>
 <ol type="1">
 <li><p>TEKRABber on Bioconductor: <a href="https://bioconductor.org/packages/release/bioc/html/TEKRABber.html">Link</a></p></li>
 <li><p>Source code on Github: <a href="https://github.com/ferygood/TEKRABber">Link</a></p></li>
@@ -770,6 +765,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
 });
+</script>
+<script src="https://giscus.app/client.js" data-repo="ferygood/ferygood.github.io" data-repo-id="R_kgDOGgjrTg" data-category="General" data-category-id="DIC_kwDOGgjrTs4CQ5S1" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 <footer class="footer">
