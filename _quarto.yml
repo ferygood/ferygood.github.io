@@ -4,7 +4,7 @@ project:
 website:
   title: "Yao-Chung"
   site-url: "https://ferygood.github.io"
-  google-analytics: "UA-181333208-1"
+  google-analytics: "G-H0GJETSLQM"
   page-footer: "Yao-Chung Chen © All Rights Reserved. 2022"
   favicon: img/brain.ico
   navbar:
@@ -32,6 +32,10 @@ format:
       dark: darkly
     css: styles.css
     toc: true
+
+comments: 
+    giscus: 
+      repo: ferygood/ferygood.github.io
 
 editor: visual
 
