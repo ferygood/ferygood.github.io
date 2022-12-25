@@ -13,6 +13,7 @@ about:
     - icon: github
       text: Github
       href: https://github.com/ferygood
+comments: false
 ---
 
 I am currently a Ph.D. student at [Nowick Lab](http://nowicklab.info/) at the Department of Mathematics and Computer Science, Freie Universität Berlin. My work is mainly focusing on developing algorithms to analyze monoallelic expression data from Alzheimer's Disease patients. I also develop pipeline to estimate the expression of KRAB-Zinc-Finger genes and transposable elements comparing between two different species. I am fascinated by learning and implement machine learning to solve real world problems!

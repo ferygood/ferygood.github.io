@@ -1,0 +1,15 @@
+---
+title: "Release my new instagram account"
+author: "Yao-Chung Chen"
+date: "2022-12-16"
+categories: [intern, machine learing]
+format: html
+---
+
+I decide to create an Instagram account, [bigdata.jojo](https://www.instagram.com/bigdata.jojo/), to record and share what I have learned from doing machine learning project. The idea of this name is referring to we are living in the flow of big data and combine with my favorite Japanese manga series, [JoJo's Bizarre Adventure](https://jojo-portal.com/).
+
+I am excited and looking forward to see how bigdata.jojo will become!
+
+Link to bigdata.jojo: [click me](https://www.instagram.com/bigdata.jojo/)
+
+![](img/bigdata.jojo_qr.png){fig-align="center" width="270"}

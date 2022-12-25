@@ -1,0 +1,26 @@
+---
+title: "Internship @ Miltenyi Biotec"
+author: "Yao-Chung Chen"
+date: "2022-11-30"
+categories: [intern, machine learing]
+format: html
+bibliography: references.bib
+---
+
+I was doing a 3-month internship from September to November at [Miltenyi Biotec](https://www.miltenyibiotec.com/DE-en/). The topic of my internship was to develop a pipeline of training a machine learning model to predict different cell-types from flow cytometry data.
+
+During the internship, I worked with a team following agile principle using [Jira](https://www.atlassian.com/software/jira?&aceid=&adposition=&adgroup=149781617252&campaign=19313890739&creative=642044895830&device=c&keyword=jira&matchtype=e&network=g&placement=&ds_kids=p74602317412&ds_e=GOOGLE&ds_eid=700000001558501&ds_e1=GOOGLE&gclid=CjwKCAiAhqCdBhB0EiwAH8M_GrxIiYwCCKoG6hWITMKNUYzD85F9gCp2bmaeXrwaQqnuyWCLLuoUiRoCCk0QAvD_BwE&gclsrc=aw.ds) and [Bitbucket](https://bitbucket.org/) to organize our sprints, tasks, and code. The framework which I was using called [Tidymodels](https://www.tidymodels.org/). Tidymodels is a collection bundle of R packages which follow the tidyverse principles that can help user to implement for machine learning tasks.
+
+![](img/bigdata.jojo.001.jpeg)
+
+As describe above, there are multiple packages collected in Tidymodels. **(1)** rsample provides functions for you so sample your data. **(2)** parsnip helps you to set up the engine of your machine learning model. **(3)** recipes can prepare the steps and process you want to include in your analysis. **(4)** tune offers you different ways to tune hyperparameters. **(5)** yardstick includes function for evaluating your model performance.
+
+![](img/bigdata.jojo.002.jpeg)
+
+workflows (or workflowsets if you have multiple models want to run) can structure your codes and perform all the analysis at once.
+
+The [GET STARTED](https://www.tidymodels.org/start/) page is a nice place to get a glance to use Tidymodels framework for machine learning task. If your are familiar with R and want to implement machine learning project with it, I will recommend you to try it out.
+
+References:
+
+[@tidymodels]
