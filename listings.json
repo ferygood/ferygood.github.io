@@ -3,8 +3,7 @@
     "listing": "/posts/posts.html",
     "items": [
       "/posts/instagram-account/index.html",
-      "/posts/internship-milteny/index.html",
-      "/posts/nextflow-tutorial/index.html"
+      "/posts/internship-milteny/index.html"
     ]
   },
   {
@@ -17,7 +16,6 @@
     "listing": "/index.html",
     "items": [
       "/posts/internship-milteny/index.html",
-      "/posts/nextflow-tutorial/index.html",
       "/posts/instagram-account/index.html",
       "/projects/TEKRABber/index.html"
     ]

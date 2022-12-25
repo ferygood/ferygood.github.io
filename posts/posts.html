@@ -70,7 +70,7 @@ ul.task-list{list-style: none;}
     const options = {
       valueNames: ['listing-image','listing-date','listing-title','listing-subtitle','listing-categories','listing-author','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -121,10 +121,10 @@ gtag('config', 'G-H0GJETSLQM', { 'anonymize_ip': true});
     <a class="nav-link" href="../about.html">About</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../projects/projects.html">Portfolio</a>
+    <a class="nav-link active" href="../posts/posts.html" aria-current="page">Posts</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../posts/posts.html" aria-current="page">Posts</a>
+    <a class="nav-link" href="../projects/projects.html">Projects</a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="https://ferygood.github.io/resume/">Resume</a>
@@ -173,7 +173,7 @@ gtag('config', 'G-H0GJETSLQM', { 'anonymize_ip': true});
 
 </section>
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="listing-actions-group">
    <div class="input-group input-group-sm quarto-listing-sort">
      <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
@@ -199,20 +199,20 @@ gtag('config', 'G-H0GJETSLQM', { 'anonymize_ip': true});
       <input type="text" class="search form-control" placeholder="Filter">
     </div>
 </div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="intern,machine learing" data-listing-date-sort="1671145200000" data-listing-file-modified-sort="1671997827835" data-listing-reading-time-sort="0.325">
-<div class="thumbnail">
-<p><a href="../posts/instagram-account/index.html"> <img src="../posts/instagram-account/img/bigdata.jojo_qr.png" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../posts/instagram-account/index.html">
-<h3 class="no-anchor listing-title">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="intern,machine learing" data-listing-date-sort="1671145200000" data-listing-file-modified-sort="1671997827835" data-listing-reading-time-sort="0.325">
+<a href="../posts/instagram-account/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="../posts/instagram-account/img/bigdata.jojo_qr.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 Release my new instagram account
-</h3>
-<div class="listing-subtitle">
-
+</h5>
+<div class="listing-reading-time card-text text-muted">
+0 min
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('intern'); return false;">
 intern
@@ -221,35 +221,31 @@ intern
 machine learing
 </div>
 </div>
-<a href="../posts/instagram-account/index.html"> </a>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Yao-Chung Chen
 </div>
-<div class="metadata">
-<a href="../posts/instagram-account/index.html">
 <div class="listing-date">
 Dec 16, 2022
 </div>
-<div class="listing-author">
-Yao-Chung Chen
 </div>
-<div class="listing-reading-time">
-0 min
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="intern,machine learing" data-listing-date-sort="1669762800000" data-listing-file-modified-sort="1671997827838" data-listing-reading-time-sort="1.09">
-<div class="thumbnail">
-<p><a href="../posts/internship-milteny/index.html"> <img src="../posts/internship-milteny/img/bigdata.jojo.001.jpeg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../posts/internship-milteny/index.html">
-<h3 class="no-anchor listing-title">
+<div class="g-col-1" data-index="1" data-categories="intern,machine learing" data-listing-date-sort="1669762800000" data-listing-file-modified-sort="1671997827838" data-listing-reading-time-sort="1.09">
+<a href="../posts/internship-milteny/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="../posts/internship-milteny/img/bigdata.jojo.001.jpeg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 Internship @ Miltenyi Biotec
-</h3>
-<div class="listing-subtitle">
-
+</h5>
+<div class="listing-reading-time card-text text-muted">
+1 min
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('intern'); return false;">
 intern
@@ -258,58 +254,17 @@ intern
 machine learing
 </div>
 </div>
-<a href="../posts/internship-milteny/index.html"> </a>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Yao-Chung Chen
 </div>
-<div class="metadata">
-<a href="../posts/internship-milteny/index.html">
 <div class="listing-date">
 Nov 30, 2022
 </div>
-<div class="listing-author">
-Yao-Chung Chen
 </div>
-<div class="listing-reading-time">
-1 min
+</div>
 </div>
 </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="nextflow,learning" data-listing-date-sort="1660428000000" data-listing-file-modified-sort="1671997743349" data-listing-reading-time-sort="0.08">
-<div class="thumbnail">
-<p><a href="../posts/nextflow-tutorial/index.html"> <img src="https://telatin.github.io/microbiome-bioinformatics/assets/images/nextflow.jpg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../posts/nextflow-tutorial/index.html">
-<h3 class="no-anchor listing-title">
-Nextflow tutorial
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('nextflow'); return false;">
-nextflow
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('learning'); return false;">
-learning
-</div>
-</div>
-<a href="../posts/nextflow-tutorial/index.html"> </a>
-</div>
-<div class="metadata">
-<a href="../posts/nextflow-tutorial/index.html">
-<div class="listing-date">
-Aug 14, 2022
-</div>
-<div class="listing-author">
-Yao-Chung Chen
-</div>
-<div class="listing-reading-time">
-0 min
-</div>
-</a>
-</div>
 </div>
 </div>
 <div class="listing-no-matching d-none">
