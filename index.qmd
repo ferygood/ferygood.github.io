@@ -2,10 +2,10 @@
 listing:
   - id: my-posts
     contents: posts
-    type: default
+    type: grid
     fields: [image, date, title]
     page-size: 3
-    categories: numbered
+    categories: cloud
   - id: my-projects
     contents: projects
     type: grid
@@ -15,20 +15,13 @@ listing:
     filter-ui: false
     fields: [image, date, title]
     page-size: 3
-    categories: numbered
+    categories: cloud
 page-layout: full
 title-block-banner: false
 comments: false
 include-in-header: meta.html
 toc: true
 ---
-
-## Portfolio
-
-::: {#my-projects}
-:::
-
-<a href="projects/projects.html"><button type="button" class="btn btn-primary float-end btn-sm">All projects</button></a>
 
 ## Posts
 
@@ -37,4 +30,9 @@ toc: true
 
 <a href="posts/posts.html"><button type="button" class="btn btn-primary float-end btn-sm">All posts</button></a>
 
-## 
+## Projects
+
+::: {#my-projects}
+:::
+
+<a href="projects/projects.html"><button type="button" class="btn btn-primary float-end btn-sm">All projects</button></a>
