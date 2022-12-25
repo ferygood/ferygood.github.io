@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Yao-Chung Chen">
-<meta name="dcterms.date" content="2022-08-14">
+<meta name="dcterms.date" content="2022-11-30">
 
-<title>Yao-Chung - Nextflow tutorial</title>
+<title>Yao-Chung - Internship @ Miltenyi Biotec</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -17,6 +17,25 @@ span.underline{text-decoration: underline;}
 div.column{display: inline-block; vertical-align: top; width: 50%;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -127,10 +146,10 @@ gtag('config', 'G-H0GJETSLQM', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Nextflow tutorial</h1>
+      <h1 class="title">Internship @ Miltenyi Biotec</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">nextflow</div>
-                <div class="quarto-category">learning</div>
+                <div class="quarto-category">intern</div>
+                <div class="quarto-category">machine learing</div>
               </div>
                   </div>
   </div>
@@ -148,7 +167,7 @@ gtag('config', 'G-H0GJETSLQM', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">August 14, 2022</p>
+        <p class="date">November 30, 2022</p>
       </div>
     </div>
       
@@ -167,16 +186,24 @@ gtag('config', 'G-H0GJETSLQM', { 'anonymize_ip': true});
 
 
 
-<p>The popular workflow language Nextflow has released their latest tutorial this year. Find the tutorials <a href="https://www.nextflow.io/blog/2022/learn-nextflow-in-2022.html">here</a></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="nextflow.io"><img src="https://telatin.github.io/microbiome-bioinformatics/assets/images/nextflow.jpg" class="img-fluid figure-img"></a></p>
-</figure>
+<p>I was doing a 3-month internship from September to November at <a href="https://www.miltenyibiotec.com/DE-en/">Miltenyi Biotec</a>. The topic of my internship was to develop a pipeline of training a machine learning model to predict different cell-types from flow cytometry data.</p>
+<p>During the internship, I worked with a team following agile principle using <a href="https://www.atlassian.com/software/jira?&amp;aceid=&amp;adposition=&amp;adgroup=149781617252&amp;campaign=19313890739&amp;creative=642044895830&amp;device=c&amp;keyword=jira&amp;matchtype=e&amp;network=g&amp;placement=&amp;ds_kids=p74602317412&amp;ds_e=GOOGLE&amp;ds_eid=700000001558501&amp;ds_e1=GOOGLE&amp;gclid=CjwKCAiAhqCdBhB0EiwAH8M_GrxIiYwCCKoG6hWITMKNUYzD85F9gCp2bmaeXrwaQqnuyWCLLuoUiRoCCk0QAvD_BwE&amp;gclsrc=aw.ds">Jira</a> and <a href="https://bitbucket.org/">Bitbucket</a> to organize our sprints, tasks, and code. The framework which I was using called <a href="https://www.tidymodels.org/">Tidymodels</a>. Tidymodels is a collection bundle of R packages which follow the tidyverse principles that can help user to implement for machine learning tasks.</p>
+<p><img src="img/bigdata.jojo.001.jpeg" class="img-fluid"></p>
+<p>As describe above, there are multiple packages collected in Tidymodels. <strong>(1)</strong> rsample provides functions for you so sample your data. <strong>(2)</strong> parsnip helps you to set up the engine of your machine learning model. <strong>(3)</strong> recipes can prepare the steps and process you want to include in your analysis. <strong>(4)</strong> tune offers you different ways to tune hyperparameters. <strong>(5)</strong> yardstick includes function for evaluating your model performance.</p>
+<p><img src="img/bigdata.jojo.002.jpeg" class="img-fluid"></p>
+<p>workflows (or workflowsets if you have multiple models want to run) can structure your codes and perform all the analysis at once.</p>
+<p>The <a href="https://www.tidymodels.org/start/">GET STARTED</a> page is a nice place to get a glance to use Tidymodels framework for machine learning task. If your are familiar with R and want to implement machine learning project with it, I will recommend you to try it out.</p>
+<p>References:</p>
+<p><span class="citation" data-cites="tidymodels">(<a href="#ref-tidymodels" role="doc-biblioref">Kuhn and Wickham 2020</a>)</span></p>
+
+
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-tidymodels" class="csl-entry" role="doc-biblioentry">
+Kuhn, Max, and Hadley Wickham. 2020. <span>“Tidymodels: A Collection of Packages for Modeling and Machine Learning Using Tidyverse Principles.”</span> <a href="https://www.tidymodels.org">https://www.tidymodels.org</a>.
 </div>
-
-
-
-</main> <!-- /main -->
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

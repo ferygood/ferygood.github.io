@@ -2,9 +2,9 @@
   {
     "listing": "/posts/posts.html",
     "items": [
-      "/posts/nextflow-tutorial/index.html",
-      "/posts/post-with-code/index.html",
-      "/posts/welcome/index.html"
+      "/posts/instagram-account/index.html",
+      "/posts/internship-milteny/index.html",
+      "/posts/nextflow-tutorial/index.html"
     ]
   },
   {
@@ -16,9 +16,9 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/internship-milteny/index.html",
       "/posts/nextflow-tutorial/index.html",
-      "/posts/post-with-code/index.html",
-      "/posts/welcome/index.html",
+      "/posts/instagram-account/index.html",
       "/projects/TEKRABber/index.html"
     ]
   }
