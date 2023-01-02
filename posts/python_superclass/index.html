@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Yao-Chung Chen">
-<meta name="dcterms.date" content="2022-11-30">
+<meta name="dcterms.date" content="2023-01-01">
 
-<title>Yao-Chung - Internship @ Miltenyi Biotec</title>
+<title>Yao-Chung - Super Python: super() a superclass method in python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -17,25 +17,69 @@ span.underline{text-decoration: underline;}
 div.column{display: inline-block; vertical-align: top; width: 50%;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
 }
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -146,10 +190,10 @@ gtag('config', 'G-H0GJETSLQM', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Internship @ Miltenyi Biotec</h1>
+      <h1 class="title">Super Python: super() a superclass method in python</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">intern</div>
-                <div class="quarto-category">machine learing</div>
+                <div class="quarto-category">python</div>
+                <div class="quarto-category">super()</div>
               </div>
                   </div>
   </div>
@@ -167,7 +211,7 @@ gtag('config', 'G-H0GJETSLQM', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">November 30, 2022</p>
+        <p class="date">January 1, 2023</p>
       </div>
     </div>
       
@@ -186,24 +230,91 @@ gtag('config', 'G-H0GJETSLQM', { 'anonymize_ip': true});
 
 
 
-<p>I was doing a 3-month internship from September to November at <a href="https://www.miltenyibiotec.com/DE-en/">Miltenyi Biotec</a>. The topic of my internship was to develop a pipeline of training a machine learning model to predict different cell-types from flow cytometry data.</p>
-<p>During the internship, I worked with a team following agile principle using <a href="https://www.atlassian.com/software/jira?&amp;aceid=&amp;adposition=&amp;adgroup=149781617252&amp;campaign=19313890739&amp;creative=642044895830&amp;device=c&amp;keyword=jira&amp;matchtype=e&amp;network=g&amp;placement=&amp;ds_kids=p74602317412&amp;ds_e=GOOGLE&amp;ds_eid=700000001558501&amp;ds_e1=GOOGLE&amp;gclid=CjwKCAiAhqCdBhB0EiwAH8M_GrxIiYwCCKoG6hWITMKNUYzD85F9gCp2bmaeXrwaQqnuyWCLLuoUiRoCCk0QAvD_BwE&amp;gclsrc=aw.ds">Jira</a> and <a href="https://bitbucket.org/">Bitbucket</a> to organize our sprints, tasks, and code. The framework which I was using called <a href="https://www.tidymodels.org/">Tidymodels</a>. Tidymodels is a collection bundle of R packages which follow the tidyverse principles that can help user to implement for machine learning tasks.</p>
-<p><img src="img/bigdata.jojo.001.jpeg" class="img-fluid"></p>
-<p>As describe above, there are multiple packages collected in Tidymodels. <strong>(1)</strong> rsample provides functions for you so sample your data. <strong>(2)</strong> parsnip helps you to set up the engine of your machine learning model. <strong>(3)</strong> recipes can prepare the steps and process you want to include in your analysis. <strong>(4)</strong> tune offers you different ways to tune hyperparameters. <strong>(5)</strong> yardstick includes function for evaluating your model performance.</p>
-<p><img src="img/bigdata.jojo.002.jpeg" class="img-fluid"></p>
-<p>workflows (or workflowsets if you have multiple models want to run) can structure your codes and perform all the analysis at once.</p>
-<p>The <a href="https://www.tidymodels.org/start/">GET STARTED</a> page is a nice place to get a glance to use Tidymodels framework for machine learning task. If your are familiar with R and want to implement machine learning project with it, I will recommend you to try it out.</p>
-<p>References:</p>
-<p><span class="citation" data-cites="tidymodels">(<a href="#ref-tidymodels" role="doc-biblioref">Kuhn and Wickham 2020</a>)</span></p>
-
-
-
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
-<div id="ref-tidymodels" class="csl-entry" role="doc-biblioentry">
-Kuhn, Max, and Hadley Wickham. 2020. <span>“Tidymodels: A Collection of Packages for Modeling and Machine Learning Using Tidyverse Principles.”</span> <a href="https://www.tidymodels.org">https://www.tidymodels.org</a>.
+<p>When I was reading the tutorials on <a href="https://pytorch.org/tutorials/beginner/basics/quickstart_tutorial.html">PyTorch</a>, I encounter a function called <code>super()</code> in python:</p>
+<p><img src="images/pytorch.png" class="img-fluid"></p>
+<p>To advance my python knowledge, I decided to dig into what <code>super()</code> did in this line. Then I found a really great article on <a href="https://realpython.com/python-super/">Real Python</a> described the use of <code>suepr()</code> in python. It uses similar geometry shapes to demonstrate how to use <code>super()</code> for object inheritance in python.</p>
+<p>In this article, I will write down some notes and summarize some key points.</p>
+<p>First we look at the figure below as an example:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/inheritance.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
-</div></section></div></main> <!-- /main -->
+<p>There are 4 classes of python object. Square object inherit from Rectangle, RightPyramid inherit from Square and Triangle. To avoid repeat code and boundless parameters/arguments in a single class, we can use <code>super()</code>. It also help us to maintain our code. <code>super()</code> function is used to give access to methods and properties of a parent or sibling class. It also returns an object that represents the parent class. (<a href="https://www.w3schools.com/python/ref_func_super.asp">W3School</a>)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/image-1399845279.png" class="img-fluid figure-img" width="603"></p>
+<p></p><figcaption class="figure-caption">source: Real Python, https://realpython.com/python-super/</figcaption><p></p>
+</figure>
+</div>
+<p>(1) This part is to provide for inheritance object to get its parameters, <code>length</code>, <code>width</code> and <code>**kwargs</code>.</p>
+<p>(2) Square class inherit from Rectangle, so you will need to use <code>super()</code> in the instance declaration.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/image-305354744.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">source: Real Python, https://realpython.com/python-super/</figcaption><p></p>
+</figure>
+</div>
+<p>(3) Since previously we have set <code>**kwargs</code> for flexible <u>multiple inheritance</u>, we can access them in a key-value pairs. The RightPyramid class inherit the height from Triangle, and inherit base from Sqaure.</p>
+<div class="callout-caution callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Danger
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I think the last line in this part should be <code>super( ).__init__(base=base, slant_height=height, **kwargs)</code></p>
+</div>
+</div>
+<p>(4) I want to point out that different shape has their formula calculating area. You should try to avoid same function name and this will help you maintain your code when your project grows larger.</p>
+<p>One more other thing is MRO. <code>__mro__</code> stands for <u>Method Resolution Order (MRO)</u>. MRO sets the rule for how a class track back to their inherit object class. The order of classes in the parenthesis can be changed to fit your MRO need.</p>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Rectangle:</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, length, width, <span class="op">**</span>kwargs):</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.length <span class="op">=</span> length</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.width <span class="op">=</span> width</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">super</span>().<span class="fu">__init__</span>(<span class="op">**</span>kwargs)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Square(Rectangle):</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, length, <span class="op">**</span>kwargs):</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">super</span>().<span class="fu">__init__</span>(length <span class="op">=</span> length, width<span class="op">=</span>length, <span class="op">**</span>kwargs)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Triangle:</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, base, height):</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.base <span class="op">=</span> base</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.height <span class="op">=</span> height</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>        <span class="bu">super</span>().<span class="fu">__init__</span>(<span class="op">**</span>kwargs)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># first track Square and then Triangle        </span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> RightPyramid_1(Square, Triangle):</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.base <span class="op">=</span> base</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co"># first track Triangle and then Square</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> RightPyramid_2(Triangle, Square):</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.base <span class="op">=</span> base</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(RightPyramid_1.__mro__)</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(RightPyramid_2.__mro__)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>(&lt;class '__main__.RightPyramid_1'&gt;, &lt;class '__main__.Square'&gt;, &lt;class '__main__.Rectangle'&gt;, &lt;class '__main__.Triangle'&gt;, &lt;class 'object'&gt;)
+(&lt;class '__main__.RightPyramid_2'&gt;, &lt;class '__main__.Triangle'&gt;, &lt;class '__main__.Square'&gt;, &lt;class '__main__.Rectangle'&gt;, &lt;class 'object'&gt;)</code></pre>
+</div>
+</div>
+<p>As the above example shows, <code>RightPyramid_1</code> and <code>RightPyramid_2</code> both inherit <strong>Square</strong> and <strong>Triangle</strong> class but in different order. You can see if you print their mro ( using <code>__mro__</code> ), it shows different orders. This sometime will cause problem if you are not using <code>**kwargs</code>.</p>
+<p>References:</p>
+<ol type="1">
+<li><a href="https://realpython.com/python-super/">Real Python: Supercharge your classes with python super()</a></li>
+<li><a href="https://www.w3schools.com/python/ref_func_super.asp">W3School: Python super() Function</a></li>
+</ol>
+
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
