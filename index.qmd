@@ -3,6 +3,7 @@ listing:
   - id: my-posts
     contents: posts
     type: grid
+    sort: "date desc"
     fields: [image, date, title]
     page-size: 3
     categories: cloud
