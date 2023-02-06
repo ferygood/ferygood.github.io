@@ -1,0 +1,14 @@
+---
+title: "NCTR Indel Calling Challenge"
+author: "Yao-Chung Chen"
+date: "2022-09-22"
+categories: [precisionFDA, indel]
+---
+
+### Abstract
+
+This year, precisionFDA has launced an Indel Calling from Oncopanel Sequencing Data Challenge. The aim of this tournament is to let teams to design methods for calling INDEL from onco panel sequencing data. I participate with Bioinformaticians from Taiwan
+
+![](images/image-1831886081.png)
+
+Results page: https://precision.fda.gov/challenges/22/results
