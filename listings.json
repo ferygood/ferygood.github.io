@@ -10,6 +10,8 @@
   {
     "listing": "/projects/projects.html",
     "items": [
+      "/projects/appChatGPT/index.html",
+      "/projects/NCTR_indel/index.html",
       "/projects/TEKRABber/index.html"
     ]
   },
@@ -19,6 +21,8 @@
       "/posts/python_superclass/index.html",
       "/posts/instagram-account/index.html",
       "/posts/internship-milteny/index.html",
+      "/projects/appChatGPT/index.html",
+      "/projects/NCTR_indel/index.html",
       "/projects/TEKRABber/index.html"
     ]
   }

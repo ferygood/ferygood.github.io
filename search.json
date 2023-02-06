@@ -21,6 +21,20 @@
     "text": "I am excited and looking forward to see how bigdata.jojo will become!\nLink to bigdata.jojo: click me"
   },
   {
+    "objectID": "projects/NCTR_indel/index.html",
+    "href": "projects/NCTR_indel/index.html",
+    "title": "NCTR Indel Calling Challenge",
+    "section": "",
+    "text": "This year, precisionFDA has launced an Indel Calling from Oncopanel Sequencing Data Challenge. The aim of this tournament is to let teams to design methods for calling INDEL from onco panel sequencing data. I participate with Bioinformaticians from Taiwan\n\nResults page: https://precision.fda.gov/challenges/22/results"
+  },
+  {
+    "objectID": "projects/appChatGPT/index.html",
+    "href": "projects/appChatGPT/index.html",
+    "title": "appChatGPT",
+    "section": "",
+    "text": "The framework used in this project is Streamlit.\n\nCreate a virtual environment for this project, appChatGPT, using virtualenv in PyCharm IDE.\nCreate a askGPT.py file for executing ChatGPT on own computer and set environment API key for security, OPENAI_API_KEY. (Ref)\n\n\nRepo: https://github.com/ferygood/appChatGPT"
+  },
+  {
     "objectID": "projects/TEKRABber/index.html",
     "href": "projects/TEKRABber/index.html",
     "title": "TEKRABber",
@@ -39,7 +53,7 @@
     "href": "index.html#projects",
     "title": "Yao-Chung",
     "section": "Projects",
-    "text": "Projects\n\n\n\n\n\n\n\n\n\n\nTEKRABber\n\n\n\nAug 15, 2022\n\n\n\n\n\n\n\n\nNo matching items\n\n\nAll projects"
+    "text": "Projects\n\n\n\n\n\n\n \n\n\n\nappChatGPT\n\n\n\nFeb 5, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNCTR Indel Calling Challenge\n\n\n\nSep 22, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTEKRABber\n\n\n\nAug 15, 2022\n\n\n\n\n\n\n\n\nNo matching items\n\n\nAll projects"
   },
   {
     "objectID": "about.html",
