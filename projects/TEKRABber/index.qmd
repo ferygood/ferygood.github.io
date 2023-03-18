@@ -43,9 +43,9 @@ head(hmGene)
 
 ### 1.1 Ortholog information and normalization
 
-In the first step, we use `orthologScale()` to get orthology information and calculate the scaling factor between two species. The species name needs to be the abbreviation of scientific species name used in Ensembl. (Note: (1)This step queries information using [*biomaRt*](https://bioconductor.org/packages/3.15/biomaRt) and it might need some time or try different mirrors due to the connections to Ensembl (2)It might take some time to calculate scaling factor based on your data size).
+In the first step, we use `orthologScale()` to get orthology information and calculate the scaling factor between two species. The species name needs to be the abbreviation of scientific species name used in Ensembl. (Note: (1)This step queries information using [*biomaRt*](https://bioconductor.org/packages/3.15/biomaRt) and it might need some time or try different mirrors due to the connections to Ensembl (2)It might take some time to calculate scaling factor based on your data size). For normalizing TEs, you need to provide a repeatmasker annotation table including four columns, (1) the name of TE (2) the class of TE (3) the average gene length of TE from your reference species (4) the average gene length from the species you want to compare. A way to download repeatmasker annotations is to query from [UCSC Genome Table Browser](http://genome.ucsc.edu/cgi-bin/hgTables?hgsid=1582443383_JGQc9hw61oGahqe20hrSWdfkjDWx&clade=mammal&org=Human&db=hg38&hgta_group=rep&hgta_track=hg38&hgta_table=0&hgta_regionType=genome&position=chr2%3A25%2C160%2C915-25%2C168%2C903&hgta_outputType=primaryTable&hgta_outFileName=hg38rmsk.csv) and select the RepeatMasker track.
 
-```{r}
+```{r eval=FALSE}
 # You can use the code below to search for species name
 ensembl <- biomaRt::useEnsembl(biomart = "genes")
 head(biomaRt::listDatasets(ensembl))
@@ -58,12 +58,27 @@ data(fetchDataHmChimp)
 fetchData <- fetchDataHmChimp
 
 # Query the data and calculate scaling factor using orthologScale():
-# fetchData <- orthologScale(
-#     geneCountRef = hmGene,
-#     geneCountCompare = chimpGene,
-#     speciesRef = "hsapiens",
-#     speciesCompare = "ptroglodytes"
-# )
+#' data(speciesCounts)
+#' data(hg38_panTro6_rmsk)
+#' hmGene <- speciesCounts$hmGene
+#' chimpGene <- speciesCounts$chimpGene
+#' hmTE <- speciesCounts$hmTE
+#' chimpTE <- speciesCounts$chimpTE
+#' 
+#' ## For demonstration, here we only select 1000 rows to save time
+#' set.seed(1234)
+#' hmGeneSample <- hmGene[sample(nrow(hmGene), 1000), ]
+#' chimpGeneSample <- chimpGene[sample(nrow(chimpGene), 1000), ]
+#' 
+#' fetchData <- orthologScale(
+#'     speciesRef = "hsapiens",
+#'     speciesCompare = "ptroglodytes",
+#'     geneCountRef = hmGeneSample,
+#'     geneCountCompare = chimpGeneSample,
+#'     teCountRef = hmTE,
+#'     teCountCompare = chimpTE,
+#'     rmsk = hg38_panTro6_rmsk
+#' )
 ```
 
 ### 1.2 Inputs for differentially expressed (DE) and correlation analysis
@@ -71,14 +86,7 @@ fetchData <- fetchDataHmChimp
 We use `DECorrInputs()` to return inputs files for downstream analysis.
 
 ```{r}
-inputBundle <- DECorrInputs(
-    orthologTable = fetchData$orthologTable,
-    scaleFactor = fetchData$scaleFactor,
-    geneCountRef = hmGene,
-    geneCountCompare = chimpGene,
-    teCountRef = hmTE,
-    teCountCompare = chimpTE
-)
+inputBundle <- DECorrInputs(fetchData)
 ```
 
 ### 1.3 DE analysis
