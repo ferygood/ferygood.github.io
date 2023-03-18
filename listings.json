@@ -2,6 +2,7 @@
   {
     "listing": "/posts/posts.html",
     "items": [
+      "/posts/mem_2023/index.html",
       "/posts/python_superclass/index.html",
       "/posts/instagram-account/index.html",
       "/posts/internship-milteny/index.html"
@@ -18,6 +19,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/mem_2023/index.html",
       "/posts/python_superclass/index.html",
       "/posts/instagram-account/index.html",
       "/posts/internship-milteny/index.html",
