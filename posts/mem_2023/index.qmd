@@ -1,0 +1,19 @@
+---
+title: "2nd Münster Evolution Meeting (MEM 2023)"
+author: "Yao-Chung Chen"
+date: "2023-03-18"
+categories: [conference, presentation, MEM]
+format: html
+---
+
+The [2nd Münster Evolution Meeting (MEM)](https://www.uni-muenster.de/Evolution/MEM/main.shtml) was held at the Aula Schloss (Schlossplatz 2, 48149 Münster, Germany) from 13 - 16 March this year. This conference meeting seeks to bring together Evolutionary Biologists from a varies of disciplines in order to foster dialogue and collaboration.
+
+![Das Schloss Münster](img/IMG_2168.jpg){fig-align="center" width="597"}
+
+During these four days of talks and poster sessions, I met a lot of nice people working on different Evolution research. I also gave a presentation on the last day about my current PhD work, *Unwinding the regulatory network of KRAB zinc finger genes and transposable elements in the evolution of primate brain*, sharing how we measure and compare expression data from humans and non-human-primates' brain RNA-seq and the development of R Bioconductor package, [TEKRABber](http://www.bioconductor.org/packages/release/bioc/html/TEKRABber.html).
+
+![My presentation in the last day session (credit: Fatemeh Zebardast)](img/presentation.jpg){fig-align="center"}
+
+![](img/IMG_2370.jpg)
+
+Thanks to my supervisor, Prof. Dr. Katja Nowick, for supporting me to attend this wonderful conference, and also all the lovely people from the Nowick's lab.
