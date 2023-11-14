@@ -21,7 +21,7 @@ install.packages("BiocManager")
 BiocManager::install("TEKRABber")
 ```
 
-```{r message=FALSE, warning=FALSE}
+```{r message=FALSE, warning=FALSE, eval=FALSE}
 library(TEKRABber)
 library(SummarizedExperiment) # load it if you are following this tutorial
 ```
@@ -30,7 +30,7 @@ library(SummarizedExperiment) # load it if you are following this tutorial
 
 In the first example, we randomly generated/picked gene and transposable elements (TE) expression data from 10 humans and 10 chimpanzees [@khrameeva2020]. The values for the first column of gene and TE count table must be **Ensembl gene ID** and **TE name**:
 
-```{r}
+```{r eval=FALSE}
 # load built-in data
 data(speciesCounts)
 hmGene <- speciesCounts$hmGene
@@ -52,7 +52,7 @@ head(biomaRt::listDatasets(ensembl))
 
 ```
 
-```{r}
+```{r eval=FALSE}
 # In order to save time, we have save the data for this tutorial.
 data(fetchDataHmChimp)
 fetchData <- fetchDataHmChimp
@@ -85,7 +85,7 @@ fetchData <- fetchDataHmChimp
 
 We use `DECorrInputs()` to return inputs files for downstream analysis.
 
-```{r}
+```{r eval=FALSE}
 inputBundle <- DECorrInputs(fetchData)
 ```
 
@@ -93,7 +93,7 @@ inputBundle <- DECorrInputs(fetchData)
 
 In this step, we need to generate a metadata contain species name (i.e., human and chimpanzee). The row names need to be same as the DE input table and the column name must be **species** (see the example below). Then we use `DEgeneTE()` to perform DE analysis. When you are comparing samples between two species, the parameter **expDesign** should be **TRUE** (as default).
 
-```{r message=FALSE}
+```{r message=FALSE, eval=FALSE}
 meta <- data.frame(
     species = c(rep("human", ncol(hmGene) - 1), 
     rep("chimpanzee", ncol(chimpGene) - 1))
@@ -113,7 +113,7 @@ hmchimpDE <- DEgeneTE(
 
 Here we use `corrOrthologTE()` to perform correlation estimation comparing each ortholog and TE. This is the most time-consuming step if you have large data. For a quick demonstration, we use a relatively small data. You can specify the correlation method and adjusted *p-value* method. The default methods are Pearson's correlation and FDR. **Note:** For more efficient and specific analysis, you can subset your data in this step to focus on only the orthologs and TEs that you are interested in.
 
-```{r warning=FALSE}
+```{r warning=FALSE, eval=FALSE}
 # load built-in data
 data(speciesCorr)
 hmGeneCorrInput <- assay_tekcorrset(speciesCorr, "gene", "human")
@@ -164,7 +164,7 @@ In the **Correlation tab** page (above figure), you can select your data in scat
 
 If you want to compare selected genes and TEs **(1)** from different tissue in same species or **(2)** control and drug treatment in same tissue in same species, please generate all the input files following the input format. Here we show an example data of prepared input files including expression counts from 10 control and 10 treatment samples. The format of input data: row names should be gene name or id, and column name is your sample id (please see details below).
 
-```{r}
+```{r eval=FALSE}
 # load built-in data
 data(ctInputDE)
 geneInputDE <- ctInputDE$gene
@@ -178,7 +178,7 @@ head(geneInputDE)
 
 For DE analysis in the same species, you also use `DEgeneTE()` function, however, you need to set the parameter **expDesign** to **FALSE**. You also need to provide a metadata which this time the column name must be **experiment**. See demonstration below:
 
-```{r message=FALSE}
+```{r message=FALSE, eval=FALSE}
 metaExp <- data.frame(experiment = c(rep("control", 5), rep("treatment", 5)))
 rownames(metaExp) <- colnames(geneInputDE)
 metaExp$experiment <- factor(
@@ -198,7 +198,7 @@ resultDE <- DEgeneTE(
 
 For a quick demonstration to perform correlation of genes and TEs in control and treatment sample, we use relatively small input tables which only include 10 genes and 10 TEs.
 
-```{r}
+```{r eval=FALSE}
 # load built-in data
 data(ctCorr)
 geneConCorrInput <- assay_tekcorrset(ctCorr, "gene", "control")
@@ -210,7 +210,7 @@ teTreatCorrInput <- assay_tekcorrset(ctCorr, "te", "treatment")
 head(geneConCorrInput)
 ```
 
-```{r}
+```{r eval=FALSE}
 controlCorr <- corrOrthologTE(
     geneInput = geneConCorrInput,
     teInput = teConCorrInput,

@@ -16,7 +16,7 @@ website:
       - text: Projects
         href: projects/projects.qmd
       - text: Resume
-        href: https://ferygood.github.io/resume/
+        href: img/Yao_CV.pdf
       - icon: github
         href: https://github.com/ferygood
       - icon: linkedin
