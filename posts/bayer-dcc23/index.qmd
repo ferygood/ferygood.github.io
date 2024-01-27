@@ -1,0 +1,25 @@
+---
+title: "Bayer Digital Campus Challenge 2023 "
+author: "Yao-Chung Chen"
+date: "2023-12-15"
+categories: [AI, LLM, data science]
+format: html
+---
+
+In recent years, the rise of artificial intelligence has led to various major companies organizing related campus competitions. While studying in Germany, I have been particularly interested in Bayer's annual Digital Campus Challenge (DCC). In 2023, I finally teamed up with a good friend, Yu-Chia, and registered for the Clinical Data Science category. Our two-person team, named "Antifungal Linguist," utilized distillation step-by-step techniques to create a language model for drug exploration. Throughout the competition, we successfully developed a prototype and applied machine learning, large language models, and tools such as PyTorch, HuggingFace, resulting in promising preliminary results.
+
+![](images/clipboard-1520725931.png){fig-align="center" width="205"}
+
+![ Screenshot of our Antifungal Linguist Prototype](images/clipboard-4232916173.png){fig-align="center" width="578"}
+
+Among the total 813 participants from 61 different countries formed 290 teams, we stood out and secured the championship in clinical data science, earning the opportunity to participate in the final round. This was a rare experience, especially being able to discuss our project with Bayer's employees and promote our idea.
+
+![ We are one of the Finalist in DCC23](images/clipboard-3136181583.png){fig-align="center" width="569"}
+
+Resources:
+
+1.  [Finale YouTube Link](https://www.youtube.com/watch?v=m6DjGUb8zC0&ab_channel=BayerCareer)
+
+2.  [Main webpage of DCC23](https://bayer.agorize.com/en/challenges/dcc23?lang=en)
+
+3.  [Antifungal Linguist Prototype](https://antifungal-linguist.streamlit.app/)

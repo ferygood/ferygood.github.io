@@ -7,8 +7,8 @@ categories: [precisionFDA, indel]
 
 ### Abstract
 
-This year, precisionFDA has launced an Indel Calling from Oncopanel Sequencing Data Challenge. The aim of this tournament is to let teams to design methods for calling INDEL from onco panel sequencing data. I participate with Bioinformaticians from Taiwan
+This year, precisionFDA has launched an Indel Calling from Oncopanel Sequencing Data Challenge. The aim of this tournament is to allow teams to design methods for calling indels from oncopanel sequencing data. I participated with bioinformaticians from Taiwan and developed a machine learning algorithm pipeline utilizing tools such as BWA, SAMtools, BCFTOOLS, DRAGMAP, Strelka, and SomaticSeq. In the end, I was selected as one of the top performers in Best Precision (see figure below). It was a great experience working with my teammates and competing against other talented participants, including the DRAGEN team from Illumina. We also thank Microsoft Azure for providing the computational resource server.
 
 ![](images/image-1831886081.png)
 
-Results page: https://precision.fda.gov/challenges/22/results
+Results page: <https://precision.fda.gov/challenges/22/results>
