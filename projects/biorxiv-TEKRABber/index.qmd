@@ -1,0 +1,14 @@
+---
+title: "PhD paper on bioRxiv"
+author: "Yao-Chung Chen"
+date: "2023-12-18"
+categories: [bioRxiv, TEKRABber, publication, phd]
+format: html
+bibliography: references.bib
+---
+
+In December, I published the outcomes of my doctoral research as a preprint on bioRxiv [@chen2023] . The article focuses on the analysis of orthologs and transposable elements relationships across species and under different conditions using the R software TEKRABber [@TEKRABber], which I developed. This software stands out for its ability to analyze the most common RNA-seq data, and its key correlation calculations are enhanced for computational speed using RCpp (C++).
+
+![](images/clipboard-3715586575.png){fig-align="center" width="573"}
+
+As of January, the software is ranked 925 out of 2266 on Bioconductor, the largest open-source platform for bioinformatics. Our next step involves submitting this article to a scientific journal.
