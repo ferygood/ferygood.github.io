@@ -63,6 +63,13 @@
     "text": "Comparing control and treatment samples within the same species\nIf you want to compare selected genes and TEs (1) from different tissue in same species or (2) control and drug treatment in same tissue in same species, please generate all the input files following the input format. Here we show an example data of prepared input files including expression counts from 10 control and 10 treatment samples. The format of input data: row names should be gene name or id, and column name is your sample id (please see details below).\n\n# load built-in data\ndata(ctInputDE)\ngeneInputDE <- ctInputDE$gene\nteInputDE <- ctInputDE$te\n\n# you need to follow the input format as below\nhead(geneInputDE)\n\n\nDE analysis\nFor DE analysis in the same species, you also use DEgeneTE() function, however, you need to set the parameter expDesign to FALSE. You also need to provide a metadata which this time the column name must be experiment. See demonstration below:\n\nmetaExp <- data.frame(experiment = c(rep(\"control\", 5), rep(\"treatment\", 5)))\nrownames(metaExp) <- colnames(geneInputDE)\nmetaExp$experiment <- factor(\n    metaExp$experiment, \n    levels = c(\"control\", \"treatment\")\n)\n\nresultDE <- DEgeneTE(\n    geneTable = geneInputDE,\n    teTable = teInputDE,\n    metadata = metaExp,\n    expDesign = FALSE\n)\n\n\n\nCorrelation analysis\nHere we demonstrate using the first 200 rows of genes and all the TEs to calculate their correlations.\n\ncontrolCorr <- corrOrthologTE(\n    geneInput = resultDE$geneCorrInputRef[c(1:200),],\n    teInput = resultDE$teCorrInputRef,\n    corrMethod = \"pearson\",\n    padjMethod = \"fdr\"\n)\n\ntreatmentCorr <- corrOrthologTE(\n    geneInput = resultDE$geneCorrInputCompare[c(1:200),],\n    teInput = resultDE$teCorrInputCompare,\n    corrMethod = \"pearson\",\n    padjMethod = \"fdr\"\n)\n\nhead(treatmentCorr)\n\n\n\nExplore your result using appTEKRABber():\n\nremotes::install_github('rstudio/gridlayout')\nappTEKRABber(\n    corrRef = controlCorr,\n    corrCompare = treatmentCorr,\n    DEobject = resultDE\n)"
   },
   {
+    "objectID": "projects/biorxiv-TEKRABber/index.html",
+    "href": "projects/biorxiv-TEKRABber/index.html",
+    "title": "PhD paper on bioRxiv",
+    "section": "",
+    "text": "As of January, the software is ranked 925 out of 2266 on Bioconductor, the largest open-source platform for bioinformatics. Our next step involves submitting this article to a scientific journal.\n\n\n\n\nReferences\n\nChen, Maupas, Nowick. 2024. “Regulatory Networks of KRAB Zinc Finger Genes and Transposable Elements Changed During Human Brain Evolution and Disease.” bioRxiv. https://doi.org/10.1101/2023.12.18.569574.\n\n\nChen, Yao-Chung, and Katja Nowick. 2023. “TEKRABber: An r Package Estimates the Correlations of Orthologs and Transposable Elements Between Two Species.” https://doi.org/10.18129/B9.bioc.TEKRABber."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Yao-Chung",
@@ -74,7 +81,7 @@
     "href": "index.html#projects",
     "title": "Yao-Chung",
     "section": "Projects",
-    "text": "Projects\n\n\n\n\n\n\n\n\n\n\nNCTR Indel Calling Challenge\n\n\n\nSep 22, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTEKRABber\n\n\n\nAug 15, 2022\n\n\n\n\n\n\n\n\nNo matching items\n\n\nAll projects"
+    "text": "Projects\n\n\n\n\n\n\n\n\n\n\nPhD paper on bioRxiv\n\n\n\nDec 18, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNCTR Indel Calling Challenge\n\n\n\nSep 22, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTEKRABber\n\n\n\nAug 15, 2022\n\n\n\n\n\n\n\n\nNo matching items\n\n\nAll projects"
   },
   {
     "objectID": "about.html",
