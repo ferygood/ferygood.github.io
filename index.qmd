@@ -11,7 +11,6 @@ listing:
     contents: projects
     type: grid
     sort: "date desc"
-    categories: true
     sort-ui: false
     filter-ui: false
     fields: [image, date, title]
@@ -20,7 +19,7 @@ listing:
 page-layout: full
 title-block-banner: false
 comments: false
-include-in-header: meta.html
+#include-in-header: meta.html
 toc: true
 ---
 
