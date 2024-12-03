@@ -2,6 +2,7 @@
   {
     "listing": "/posts/posts.html",
     "items": [
+      "/posts/eurobioc2024/index.html",
       "/posts/bayer-dcc23/index.html",
       "/posts/mem_2023/index.html",
       "/posts/python_superclass/index.html",
@@ -20,6 +21,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/eurobioc2024/index.html",
       "/posts/bayer-dcc23/index.html",
       "/posts/mem_2023/index.html",
       "/posts/python_superclass/index.html",
