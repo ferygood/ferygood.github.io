@@ -1,0 +1,25 @@
+---
+title: "EuroBioC2024 Conference "
+author: "Yao-Chung Chen"
+date: "2024-09-30"
+categories: [conference, Bioconductor, TEKRABber, software]
+format: html
+---
+
+From September 3rd to 6th, I had the incredible opportunity to attend **EuroBioC2024** (2024 European Bioconductor Conference, <https://eurobioc2024.bioconductor.org/>) at the University of Oxford. As a Bioconductor software developer, this was my first time participating in this conference, and it was an inspiring and eye-opening experience.
+
+![](images/clipboard-3456942461.png)
+
+Meeting with many talented developers, I learned about the bioinformatic software currently in development or soon to be submitted to the Bioconductor platform, and explore how these tools could shape the future of bioinformatics. This year, the topics heavily focused on spatial transcriptomic analysis.
+
+During the conference, I delivered an oral presentation on my software, **TEKRABber**, demonstrating its capability to analyze cross-species RNA-seq data effectively. Sharing my work with audiences from different fields and receiving constructive feedback was truly rewarding.
+
+![](images/clipboard-2098351335.png)
+
+After the conference, I took some time to explore **Christ Church College**, famously known as the inspiration for the Harry Potter films. The rich history and stunning architecture added a magical touch to end of my visit.
+
+![](images/clipboard-1487423686.png)
+
+I highly recommend this conference to software developer and scientist/student who are interested in bioinformatics. You do not neccessarily to be a developer. I also meet master students who just enter this field.
+
+If you're curious, keep an eye on the latest updates and announcements from EuroBioC! More interesting events can be found on their online calendar: <https://www.bioconductor.org/help/events/>
